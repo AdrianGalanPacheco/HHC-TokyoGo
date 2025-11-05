@@ -1,5 +1,5 @@
 import * as basicLightbox from "basiclightbox";
-import "basiclightbox/dist/basiclightbox.min.css";
+import "basiclightbox/./dist/basicLightbox.min.css";
 
 document.addEventListener("DOMContentLoaded", () => {
     const currentPagePath = window.location.pathname;
