@@ -1,0 +1,179 @@
+@use "../variables";
+
+/* Mobile */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 10vh;
+    width: 100%;
+    z-index: 1;
+    background-color: variables.$color-bg-header;
+    display: flex;
+    align-items: center;
+    color: variables.$color-text-header;
+    justify-content: space-between;
+    padding: 0 1.5rem;
+    text-align: center;
+
+    &__checkbox {
+        display: none;
+    }
+
+    &__checkbox:checked~&__sidebar {
+        left: 0;
+    }
+
+    &__checkbox:checked~&__overlay {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &__menu, &__spacer {
+        width: 40px;
+    }
+
+    &__title {
+        width: 100%;
+
+        a {
+            font-size: 2rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 6px variables.$color-shadow;
+            color: variables.$color-text-header;
+            text-decoration: none;
+        }
+    }
+
+    &__sidebar {
+        position: fixed;
+        top: 0;
+        left: -75vw;
+        width: 75vw;
+        height: 100%;
+        background-color: variables.$color-bg-header;
+        box-shadow: 4px 0 20px variables.$color-shadow;
+        padding: 2rem 1.5rem;
+        z-index: 2;
+
+        &-close {
+            position: absolute;
+            top: 2rem;
+            left: 2rem;
+            font-size: 2rem;
+            text-align: left;
+        }
+
+        &-list {
+            list-style: none;
+            padding: 2rem;
+            margin: 2rem 0 0 0;
+            text-align: center;
+
+            li {
+                margin-bottom: 2rem;
+
+                a {
+                    text-decoration: none;
+                    color: variables.$color-text-header;
+                    font-size: 1.2rem;
+
+                    &.is-active {
+                        font-weight: 700;
+                        color: variables.$color-accent;
+                    }
+                }
+            }
+        }
+    }
+
+    &__overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: variables.$color-overlay-header;
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@media (min-width: variables.$mqTablet) {
+    .header {
+        padding: 0 3rem;
+
+        &__sidebar {
+            left: -50vw;
+            width: 50vw;
+
+            li {
+                a {
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+}
+
+/* Desktop */
+@media (min-width: variables.$mqDesktop) {
+    .header {
+        height: auto;
+        flex-direction: column;
+
+        &__menu,
+        &__spacer,
+        &__overlay,
+        &__sidebar-close {
+            display: none
+        }
+
+        &__title {
+            margin: 5vh 0 0;
+
+            a {
+                font-size: 5rem;
+                display: inline-block;
+
+                &:hover {
+                    transform: scale(1.2);
+                }
+            }
+        }
+
+        &__sidebar {
+            position: static;
+            height: auto;
+            padding: auto;
+            background-color: transparent;
+            box-shadow: none;
+            max-width: 1200px;
+            width: 100%;
+            margin: 2vh 0;
+
+            &-list {
+                display: flex;
+                gap: 2rem;
+                padding: 0;
+                margin: auto;
+                justify-content: space-between;
+
+                li {
+                    margin-bottom: 0;
+
+                    a {
+                        display: inline-block;
+                        position: relative;
+                        font-size: 2rem;
+
+                        &:hover {
+                            transform: scale(1.2);
+                            font-weight: 700;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,104 @@
+@use "../variables";
+
+/* Mobile */
+.home-header {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 10vh 1rem 5vh 1rem;
+    width: 100%;
+    background-color: variables.$color-bg-home;
+    color: variables.$color-text-home;
+    text-align: center;
+
+    &__title {
+        font-size: 4rem;
+    }
+
+    &__subtitle {
+        width: 70%;
+        margin: auto;
+        font-size: 2rem;
+    }
+
+    &__nav {
+        margin-top: 2rem;
+    }
+
+    &__list {
+        list-style: none;
+        padding-left: 0;
+
+        li {
+            margin-bottom: 2rem;
+
+            a {
+                display: inline-flex;
+                align-items: center;
+                text-decoration: none;
+                color: variables.$color-text-home;
+                font-weight: 700;
+
+                i {
+                    margin-right: 0.5rem;
+                    color: variables.$color-icon-home;
+                }
+            }
+        }
+    }
+}
+
+.separator--home-header {
+    background-color: variables.$color-separator-home;
+}
+
+/* Tablet */
+@media (min-width: variables.$mqTablet) {
+    .home-header {
+        padding-bottom: 10vh;
+
+        &__title {
+            font-size: 5rem;
+        }
+
+        &__list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem 10rem;
+            margin-top: 7vh;
+
+            li {
+
+                a {
+                    display: inline-flex;
+                    align-items: center;
+                }
+            }
+        }
+    }
+}
+
+/* Desktop */
+@media (min-width: variables.$mqDesktop) {
+    .home-header {
+        
+        &__title {
+            font-size: 10rem;
+            margin-bottom: 0;
+        }
+        
+
+        &__list {
+            display: flex;
+            gap: 0 5rem;
+
+            a:hover {
+                cursor: pointer;
+                transform: scale(1.2);
+                color: variables.$color-lnk-hover;
+            }
+        }
+    }
+}

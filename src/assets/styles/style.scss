@@ -1,0 +1,62 @@
+@use "dependencies";
+@use "variables";
+@use "./layouts/home";
+@use "./layouts/header";
+@use "./layouts/category";
+@use "./layouts/details";
+@use "./layouts/links";
+@use "./layouts/footer";
+
+/* Mobile */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: variables.$font-family-sans-serif;
+  font-size: variables.$font-size;
+  line-height: variables.$line-height;
+  background-color: variables.$color-bg;
+  color: variables.$color-text;
+  overflow-x: hidden;
+}
+
+.separator {
+  display: block;
+  width: 75%;
+  height: 3px;
+  margin: 2rem auto;
+  border-radius: 2px;
+}
+
+.button {
+  display: inline-block;
+  background-color: variables.$color-btn;
+  color: variables.$color-btn-text;
+  border-radius: variables.$border-radius;
+  padding: 8px 15px;
+  box-shadow: variables.$box-shadow;
+  text-decoration: none;
+
+  &:hover {
+    transform: scale(1.1);
+    background-color: variables.$color-btn-hover;
+  }
+}
+
+/* Tablet */
+@media (min-width: variables.$mqTablet) {
+  body {
+    font-size: 1.5rem;
+  }
+}
+
+/* Desktop */
+@media (min-width: variables.$mqDesktop) {
+  body {
+    font-size: 2rem;
+  }
+}

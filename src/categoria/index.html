@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>TokyoGo! | Gastronomía</title>
+  <meta name="author" content="Adrián Galán Pacheco">
+  <meta name="description"
+    content="TokyoGo!: Explora la increíble gastronomía de Tokio. Descubre platos icónicos como el ramen, sushi y tempura, y encuentra los mejores lugares para disfrutar de la auténtica comida japonesa.">
+
+  <!-- Icono creado por Ehtisham Abid - Flaticon: https://www.flaticon.com/free-icons/architecture-and-city -->
+  <link rel="icon" href="../assets/images/flaticon.png" type="image/png">
+
+  <link rel="stylesheet" href="../../node_modules/normalize.css/normalize.css">
+  <link rel="stylesheet" href="../assets/styles/style.scss">
+
+</head>
+
+<body>
+  <!-- Header -->
+  <include src="./src/assets/views/header.html"></include>
+
+  <main class="category">
+
+    <!-- Intro -->
+    <section class="category__intro">
+      <h1 class="category__title">Gastronomía</h1>
+      <p class="category__subtitle">Sumérgete en un viaje culinario por el corazón de Japón. Desde los reconfortantes
+        tazones de ramen hasta el delicado arte del sushi, descubre los sabores, platos y tradiciones que hacen de la
+        gastronomía de Tokio una experiencia inolvidable.</p>
+
+      <span class="separator separator--category"></span>
+
+    </section>
+
+    <!-- Cards -->
+    <section class="category__cards-container">
+
+      <article class="category-card">
+        <img class="category-card__image" src="../assets/images/ramen.jpg" alt="Un tazón de ramen.">
+        <!-- Card info -->
+        <div class="category-card__content">
+          <h2 class="category-card__title">Ramen</h2>
+          <p class="category-card__description">El plato más icónico de Japón. Un reconfortante tazón de fideos
+            servido en un caldo lleno de sabor y tradición.</p>
+          <a href="./det1" class="button">Ver más</a>
+        </div>
+      </article>
+
+      <article class="category-card">
+        <img class="category-card__image" src="../assets/images/tempura.jpg" alt="Un plato de tempura crujiente.">
+        <!-- Card info -->
+        <div class="category-card__content">
+          <h2 class="category-card__title">Tempura crujiente</h2>
+          <p class="category-card__description">El arte del rebozado perfecto. Mariscos y verduras fritas con una
+            ligereza y textura que sorprenden en cada bocado.</p>
+          <a href="./det2" class="button">Ver más</a>
+        </div>
+      </article>
+
+      <article class="category-card">
+        <img class="category-card__image" src="../assets/images/takoyaki.jpg" alt="Un pincho de takoyaki.">
+        <!-- Card info -->
+        <div class="category-card__content">
+          <h2 class="category-card__title">Takoyaki</h2>
+          <p class="category-card__description">El sabor de la calle en Japón. Bolas de pulpo cremosas por dentro
+            y doradas por fuera, cubiertas de sabrosas salsas.</p>
+          <a href="#" class="button">Ver más</a>
+        </div>
+      </article>
+
+      <article class="category-card">
+        <img class="category-card__image" src="../assets/images/onigiri.jpg" alt="Un plato de onigiris.">
+        <!-- Card info -->
+        <div class="category-card__content">
+          <h2 class="category-card__title">Onigiri</h2>
+          <p class="category-card__description">El snack japonés por excelencia. Un triángulo de arroz relleno de
+            ingredientes sabrosos, ideal para llevar a cualquier parte.</p>
+          <a href="#" class="button">Ver más</a>
+        </div>
+      </article>
+
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <include src="./src/assets/views/footer.html"></include>
+
+  <script type="module" src="../assets/scripts/main.js"></script>
+</body>
+
+</html>

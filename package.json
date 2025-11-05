@@ -1,0 +1,30 @@
+{
+    "name": "tokyogo",
+    "private": true,
+    "version": "0.0.0",
+    "source": "src/index.html",
+    "browserslist": [
+        "> 0.5%",
+        "last 2 versions",
+        "Firefox ESR",
+        "not dead"
+    ],
+    "scripts": {
+        "parcel:dev": "parcel",
+        "parcel:build": "parcel build",
+        "clean": "rimraf dist .parcel-cache",
+        "start": "npm-run-all clean parcel:dev",
+        "build": "npm-run-all clean parcel:build"
+    },
+    "devDependencies": {
+        "@fortawesome/fontawesome-free": "^7.1.0",
+        "@parcel/transformer-sass": "^2.16.0",
+        "basiclightbox": "^5.0.4",
+        "normalize.css": "^8.0.1",
+        "npm-run-all": "^4.1.5",
+        "parcel": "^2.16.0",
+        "posthtml-alt-always": "^1.0.1",
+        "posthtml-include": "^2.0.1",
+        "rimraf": "^6.0.1"
+    }
+}

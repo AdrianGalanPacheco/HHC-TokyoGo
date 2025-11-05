@@ -1,0 +1,130 @@
+@use "../variables";
+
+/* Mobile */
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    width: 100%;
+    background-color: variables.$color-bg-footer;
+    color: variables.$color-text-footer;
+
+    &__container {
+        text-align: center;
+    }
+
+    &__title {
+        font-size: 1.5rem;
+    }
+
+    &__list {
+        list-style: none;
+        text-align: center;
+        padding-left: 0;
+
+        li {
+            margin-bottom: 2rem;
+
+            i {
+                color: variables.$color-icon-footer;
+                margin-right: 5px;
+            }
+
+            a {
+                text-decoration: none;
+                color: variables.$color-text-footer;
+            }
+        }
+    }
+
+    &__social-icons {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    &__social-icon {
+        color: variables.$color-icon-footer;
+    }
+
+    &__bottom {
+        font-size: 0.9rem;
+    }
+}
+
+.separator--footer {
+    background-color: variables.$color-separator-footer;
+}
+
+/* Tablet */
+@media (min-width: variables.$mqTablet) {
+    .footer {
+        padding: 2rem 4rem;
+
+        &__container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            align-items: start;
+            gap: 2rem 5rem;
+        }
+
+        &__bottom {
+            align-self: flex-end;
+            padding-right: 2rem;
+        }
+    }
+
+    .footer .separator--footer {
+        display: none;
+    }
+}
+
+/* Desktop */
+@media (min-width: variables.$mqDesktop) {
+    .footer {
+
+        &__container {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        &__title,
+        &__list {
+            text-align: left;
+        }
+
+        &__title {
+            font-size: 2rem;
+        }
+
+        &__list {
+
+            a {
+                display: inline-block;
+            }
+
+            a:hover {
+                cursor: pointer;
+                color: variables.$color-lnk-hover;
+                transform: scale(1.2);
+            }
+        }
+
+        &__social-icons {
+            flex-direction: row;
+
+            i:hover {
+                cursor: pointer;
+                color: variables.$color-lnk-hover;
+                transform: scale(1.2);
+            }
+        }
+
+        &__bottom {
+            font-size: 1.2rem;
+        }
+    }
+}

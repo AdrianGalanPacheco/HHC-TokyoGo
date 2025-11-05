@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TokyoGo! | Ramen</title>
+    <meta name="author" content="Adrián Galán Pacheco">
+    <meta name="description"
+        content="TokyoGo!: Todo sobre el ramen japonés. Descubre su historia, los diferentes tipos de caldo y los toppings imprescindibles de este plato icónico.">
+
+    <!-- Icono creado por Ehtisham Abid - Flaticon: https://www.flaticon.com/free-icons/architecture-and-city -->
+    <link rel="icon" href="../assets/images/flaticon.png" type="image/png">
+
+    <link rel="stylesheet" href="../../node_modules/normalize.css/normalize.css">
+    <link rel="stylesheet" href="../assets/styles/style.scss">
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <include src="./src/assets/views/header.html"></include>
+
+    <main class="details">
+
+        <!-- Intro -->
+        <section class="details__intro">
+            <h1 class="details__title">Ramen</h1>
+            <img class="details__image" src="../assets/images/ramen.jpg" alt="Un tazón de ramen.">
+            <div class="details__info">
+                <p>El ramen es mucho más que una simple sopa de fideos; es un universo culinario, una obsesión nacional
+                    y una forma de arte. Originario de China, este plato fue adaptado y perfeccionado en Japón hasta
+                    convertirse en un icono indiscutible de su gastronomía, con infinitas variaciones regionales.</p>
+                <p>La base de un buen ramen reside en la perfecta armonía de sus componentes: los fideos (men), el caldo
+                    (dashi), el condimento base (tare) y los toppings. El caldo, cocido a fuego lento durante horas,
+                    puede ser de cerdo (tonkotsu), pollo (tori paitan) o vegetales, ofreciendo sabores desde lo más
+                    ligero hasta lo más denso.</p>
+                <p>Explorar el mundo del ramen en Tokio es una aventura en sí misma. Desde pequeñas barras con apenas
+                    seis asientos hasta famosas cadenas, cada local ofrece su propia interpretación de este plato
+                    reconfortante, participando en un ritual cultural que define la vida diaria de millones de
+                    japoneses.</p>
+            </div>
+        </section>
+
+        <span class="separator separator--details"></span>
+
+        <!-- Gallery -->
+        <section class="details__gallery">
+            <h2 class="details__subtitle">Galería</h2>
+            <div class="details__gallery-cards">
+                <figure class="details__gallery-card">
+                    <img class="details__gallery-image" src="../assets/images/ramen1.jpg"
+                        alt="Tazón de ramen con naruto.">
+                    <figcaption class="details__gallery-caption">Ramen con naruto.</figcaption>
+                </figure>
+
+                <figure class="details__gallery-card">
+                    <img class="details__gallery-image" src="../assets/images/ramen2.jpg" alt="Tazón de ramen de cerdo.">
+                    <figcaption class="details__gallery-caption">Tazón de ramen de cerdo.</figcaption>
+                </figure>
+
+                <figure class="details__gallery-card">
+                    <img class="details__gallery-image" src="../assets/images/ramen3.jpg" alt="Tazón de ramen.">
+                    <figcaption class="details__gallery-caption">Tazón de ramen.</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <span class="separator separator--details"></span>
+
+        <!-- Video -->
+        <section class="details__videos">
+            <h2 class="details__subtitle">Vídeos</h2>
+            <div class="details__video-container">
+                <iframe class="details__video" src="https://www.youtube.com/embed/Wqb2fz06zYo?si=AhvCsKdbVqb0FwPh"
+                    title="Receta sobre el ramen japonés" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <include src="./src/assets/views/footer.html"></include>
+
+    <script type="module" src="../assets/scripts/main.js"></script>
+</body>
+
+</html>

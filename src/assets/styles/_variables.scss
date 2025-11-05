@@ -1,0 +1,41 @@
+@use "sass:color";
+
+$font-family-sans-serif: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$font-family-serif: "Merriweather", "Georgia", "Times New Roman", serif;
+
+$color-primary: #b93732;
+$color-secondary: #588157;
+$color-accent: #e58c9f;
+$color-bg: #fdfcf6;
+$color-text: #343434;
+$color-separator: #d1d1d1;
+$color-shadow: rgba(52, 52, 52, 0.15);
+$color-caption: rgba(52, 52, 52, 0.15);
+
+$color-btn: $color-accent;
+$color-btn-text: $color-bg;
+$color-btn-hover: color.scale($color-btn, $lightness: -10%);
+$color-lnk-hover: color.scale($color-primary, $lightness: -10%);
+
+$color-bg-home: $color-accent;
+$color-text-home: $color-bg;
+$color-separator-home: $color-primary;
+$color-icon-home: color.scale($color-accent, $lightness: 70%);
+
+$color-bg-header: $color-secondary;
+$color-text-header: $color-bg;
+$color-overlay-header: rgba(0, 0, 0, 0.35);
+
+$color-bg-footer: $color-secondary;
+$color-text-footer: $color-bg;
+$color-separator-footer: color.scale($color-secondary, $lightness: -20%);
+$color-icon-footer: color.scale($color-secondary, $lightness: 60%);
+
+$mqMobile: 360px;
+$mqTablet: 768px;
+$mqDesktop: 1200px;
+$font-size: 16px;
+$line-height: 1.6;
+$section-padding: 0 4rem 2rem 4rem;
+$border-radius: 10px;
+$box-shadow: 0 4px 10px $color-shadow;

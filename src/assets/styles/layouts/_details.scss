@@ -1,0 +1,167 @@
+@use "../variables";
+
+/* Mobile */
+.details {
+    padding: 10vh 1.5vw 0;
+    max-width: 1200px;
+    margin: auto;
+
+    &__intro {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 2rem;
+    }
+
+    &__title {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 1vh;
+        color: variables.$color-primary;
+    }
+
+    &__image {
+        width: 100%;
+        max-width: 800px;
+        border-radius: variables.$border-radius;
+        box-shadow: variables.$box-shadow;
+    }
+
+    &__gallery {
+
+        &-cards {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            padding-left: 2rem;
+            padding-right: 2rem;
+            justify-content: space-between;
+            gap: 2rem;
+            margin-bottom: 5rem;
+        }
+
+        &-card {
+            width: 100%;
+            max-width: 360px;
+            border-radius: variables.$border-radius;
+            box-shadow: variables.$box-shadow;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            margin: 0;
+        }
+
+        &-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        &-caption {
+            padding: 1rem;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            text-align: center;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+    }
+
+    &__subtitle {
+        font-weight: 700;
+        color: variables.$color-secondary;
+        text-align: center;
+        font-size: 2rem;
+        margin-top: 0;
+    }
+
+    &__videos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 5vh;
+        padding: 0 2rem;
+    }
+
+    &__video-container {
+        position: relative;
+        aspect-ratio: 16/9;
+        overflow: hidden;
+        border-radius: variables.$border-radius;
+        box-shadow: variables.$box-shadow;
+        max-width: 360px;
+        width: 100%;
+    }
+
+    &__video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.separator--details {
+    background-color: variables.$color-separator;
+}
+
+/* Tablet */
+@media (min-width: variables.$mqTablet) {
+    .details {
+        padding: 10vh 3vw 0;
+
+        &__title {
+            font-size: 3.5rem;
+        }
+
+        &__gallery {
+           
+            &-cards {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+            }
+
+            &-image {
+                height: 280px;
+            }
+        }
+
+        &__video-container {
+            max-width: 900px;
+        }
+    }
+}
+
+/* Desktop */
+@media (min-width: variables.$mqDesktop) {
+    .details {
+        padding: 25vh 5vw 0;
+
+        &__title {
+            font-size: 4rem;
+        }
+
+        &__gallery {
+           
+            &-cards {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 3rem;
+            }
+
+            &-image {
+                height: 320px;
+            }
+        }
+
+        &__video-container {
+            max-width: 1000px;
+        }
+    }
+}

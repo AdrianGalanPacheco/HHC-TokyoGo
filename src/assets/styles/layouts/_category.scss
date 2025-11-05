@@ -1,0 +1,123 @@
+@use "../variables";
+
+/* Mobile */
+.category {
+    padding: 10vh 1.5vw 0;
+    max-width: 1200px;
+    margin: auto;
+
+    &__intro {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__title {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 1vh;
+        color: variables.$color-primary;
+    }
+
+    &__subtitle {
+        max-width: 600px;
+    }
+
+    &__cards-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        margin-bottom: 5vh;
+        margin-top: 2vh;
+        padding: 0 2vh;
+    }
+
+    &-card {
+        width: 100%;
+        max-width: 360px;
+        border-radius: variables.$border-radius;
+        box-shadow: variables.$box-shadow;
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+
+        a {
+            text-decoration: none;
+            color: variables.$color-text;
+        }
+
+        &__image {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        &__content {
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        &__title {
+            font-weight: 700;
+            color: variables.$color-secondary;
+            margin: 0;
+        }
+
+        &__description {
+            flex-grow: 1;
+        }
+    }
+}
+
+.separator--category {
+    background-color: variables.$color-separator;
+}
+
+/* Tablet */
+@media (min-width: variables.$mqTablet) {
+    .category {
+        padding: 10vh 3vw 0;
+
+        &__title {
+            font-size: 3.5rem;
+        }
+
+        &__cards-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2.5rem;
+            margin: 3rem auto 5rem;
+            justify-items: center;
+        }
+    }
+}
+
+/* Desktop */
+@media (min-width: variables.$mqDesktop) {
+    .category {
+        padding: 40vh 5vw 0;
+
+        &__title {
+            font-size: 4rem;
+        }
+
+        &__subtitle {
+            max-width: 800px;
+        }
+
+        &__cards-container {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+        }
+
+        &-card {
+            max-width: none;
+        }
+    }
+}

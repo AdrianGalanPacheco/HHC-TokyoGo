@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TokyoGo! | Tempura Crujiente</title>
+    <meta name="author" content="Adrián Galán Pacheco">
+    <meta name="description"
+        content="TokyoGo!: Descubre el arte de la tempura japonesa en Tokio. Aprende sobre su rebozado ligero, los ingredientes frescos y la técnica que lo convierte en una delicia crujiente.">
+
+    <!-- Icono creado por Ehtisham Abid - Flaticon: https://www.flaticon.com/free-icons/architecture-and-city -->
+    <link rel="icon" href="../assets/images/flaticon.png" type="image/png">
+
+    <link rel="stylesheet" href="../../node_modules/normalize.css/normalize.css">
+    <link rel="stylesheet" href="../assets/styles/style.scss">
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <include src="./src/assets/views/header.html"></include>
+
+    <main class="details">
+
+        <!-- Intro -->
+        <section class="details__intro">
+            <h1 class="details__title">Tempura Crujiente</h1>
+            <img class="details__image" src="../assets/images/tempura.jpg" alt="Plato de tempura.">
+            <div class="details__info">
+                <p>La tempura es uno de los platos más delicados de la cocina japonesa, una técnica que eleva la fritura
+                    a la categoría de arte. A diferencia de otros fritos, la tempura se caracteriza por un rebozado
+                    increíblemente ligero y crujiente que realza el sabor natural de los ingredientes en lugar de
+                    ocultarlo.</p>
+                <p>El secreto reside en su masa, o 'koromo', preparada con harina de trigo de bajo contenido en gluten,
+                    huevo y agua helada, que se mezcla mínimamente para evitar activar el gluten. Esta masa se aplica a
+                    mariscos frescos y verduras de temporada, que se fríen rápidamente en aceite caliente, creando una
+                    capa etérea que se deshace en la boca.</p>
+                <p>Tradicionalmente, la tempura se sirve caliente, justo al salir del aceite, acompañada de una salsa
+                    para mojar llamada 'tentsuyu', a base de dashi, mirin y salsa de soja, a la que se le añade jengibre
+                    y daikon rallado. Desde los puestos callejeros hasta los restaurantes con estrellas Michelin, probar
+                    una tempura bien hecha es una experiencia esencial en Tokio.</p>
+            </div>
+        </section>
+
+        <span class="separator separator--details"></span>
+
+        <!-- Gallery -->
+        <section class="details__gallery">
+            <h2 class="details__subtitle">Galería</h2>
+            <div class="details__gallery-cards">
+                <figure class="details__gallery-card">
+                    <img class="details__gallery-image" src="../assets/images/tempura1.jpg"
+                        alt="Señora japonesa haciendo tempura crujiente.">
+                    <figcaption class="details__gallery-caption">Señora cocinando tempura crujiente.</figcaption>
+                </figure>
+
+                <figure class="details__gallery-card">
+                    <img class="details__gallery-image" src="../assets/images/tempura2.jpg"
+                        alt="Tempura crujiente de gambas.">
+                    <figcaption class="details__gallery-caption">Tempura crujiente de gambas.</figcaption>
+                </figure>
+
+                <figure class="details__gallery-card">
+                    <img class="details__gallery-image" src="../assets/images/tempura3.jpg"
+                        alt="Bol de tempura crujiente variada.">
+                    <figcaption class="details__gallery-caption">Bol de tempura crujiente variada.</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <span class="separator separator--details"></span>
+
+        <!-- Video -->
+        <section class="details__videos">
+            <h2 class="details__subtitle">Vídeos</h2>
+            <div class="details__video-container">
+                <iframe class="details__video" src="https://www.youtube.com/embed/EGxiKp_HX6U?si=aZbcl_rPjtlu2ok4"
+                    title="Receta sobre cómo hacer tempura japonesa" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <include src="./src/assets/views/footer.html"></include>
+
+    <script type="module" src="../assets/scripts/main.js"></script>
+</body>
+
+</html>

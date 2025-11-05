@@ -1,0 +1,112 @@
+@use "../variables";
+
+/* Mobile */
+.links {
+    padding: 10vh 1.5vw 5vh;
+    max-width: 1200px;
+    margin: auto;
+
+    &__intro {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__title {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 1vh;
+        color: variables.$color-primary;
+    }
+
+    &__subtitle {
+        max-width: 600px;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__section {
+        margin: 0 1rem;
+
+        &-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: variables.$color-secondary;
+        }
+    }
+
+    &__list {
+        list-style: none;
+
+        li {
+            margin-bottom: 2rem;
+
+            a {
+                text-decoration: none;
+                color: variables.$color-accent;
+            }
+        }
+    }
+}
+
+.separator--links {
+    background-color: variables.$color-separator;
+}
+
+/* Tablet */
+@media (min-width: variables.$mqTablet) {
+    .links {
+        padding: 10vh 3vw 5vh;
+
+        &__title {
+            font-size: 3.5rem;
+        }
+
+        &__subtitle {
+            max-width: 800px;
+        }
+
+        &__section {
+            &-title {
+                font-size: 1.8rem;
+            }
+        }
+    }
+}
+
+/* Desktop */
+@media (min-width: variables.$mqDesktop) {
+    .links {
+        padding: 40vh 5vw 5vh;
+
+        &__title {
+            font-size: 4rem;
+        }
+
+        &__subtitle {
+            max-width: 1000px;
+        }
+
+        &__section {
+            &-title {
+                font-size: 2.5rem;
+            }
+        }
+
+        &__list {
+            li {
+                a {
+                    display: inline-block;
+
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+    }
+}
