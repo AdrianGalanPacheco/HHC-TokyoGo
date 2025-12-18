@@ -20,15 +20,26 @@
 
 <body>
 
+    <!-- Skip link -->
+    <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
+
     <!-- Header -->
     <include src="./src/assets/views/header.html"></include>
 
-    <main class="details">
+    <main class="details" id="main-content">
 
         <!-- Intro -->
         <section class="details__intro">
             <h1 class="details__title">Tempura Crujiente</h1>
-            <img class="details__image" src="../assets/images/tempura.jpg" alt="Plato de tempura.">
+            <!-- Responsive images -->
+            <picture>
+                <source media="(max-width: 767px)" srcset="../assets/images/tempura.jpg?width=600&height=600&as=webp"
+                    type="image/webp">
+                <source media="(min-width: 768px)" srcset="../assets/images/tempura.jpg?width=1200&as=webp"
+                    type="image/webp">
+                <img class="details__image" src="../assets/images/tempura.jpg?width=800" alt="Plato de tempura."
+                    loading="eager">
+            </picture>
             <div class="details__info">
                 <p>La tempura es uno de los platos más delicados de la cocina japonesa, una técnica que eleva la fritura
                     a la categoría de arte. A diferencia de otros fritos, la tempura se caracteriza por un rebozado
@@ -51,21 +62,40 @@
         <section class="details__gallery">
             <h2 class="details__subtitle">Galería</h2>
             <div class="details__gallery-cards">
+                <!-- Responsive images -->
                 <figure class="details__gallery-card">
-                    <img class="details__gallery-image" src="../assets/images/tempura1.jpg"
-                        alt="Señora japonesa haciendo tempura crujiente.">
+                    <picture>
+                        <source srcset="../assets/images/tempura1.jpg?as=webp&width=400 400w, 
+                                    ../assets/images/tempura1.jpg?as=webp&width=800 800w,
+                                    ../assets/images/tempura1.jpg?as=webp&width=1200 1200w"
+                            sizes="(max-width: 768px) 50vw, (max-width: 1200px) 100vw, 300px" type="image/webp">
+                        <img class="details__gallery-image" src="../assets/images/tempura1.jpg?width=600"
+                            alt="Señora japonesa haciendo tempura crujiente." loading="lazy">
+                    </picture>
                     <figcaption class="details__gallery-caption">Señora cocinando tempura crujiente.</figcaption>
                 </figure>
 
                 <figure class="details__gallery-card">
-                    <img class="details__gallery-image" src="../assets/images/tempura2.jpg"
-                        alt="Tempura crujiente de gambas.">
+                    <picture>
+                        <source srcset="../assets/images/tempura2.jpg?as=webp&width=400 400w, 
+                                    ../assets/images/tempura2.jpg?as=webp&width=800 800w,
+                                    ../assets/images/tempura2.jpg?as=webp&width=1200 1200w"
+                            sizes="(max-width: 768px) 50vw, (max-width: 1200px) 100vw, 300px" type="image/webp">
+                        <img class="details__gallery-image" src="../assets/images/tempura2.jpg?width=600"
+                            alt="Tempura crujiente de gambas." loading="lazy">
+                    </picture>
                     <figcaption class="details__gallery-caption">Tempura crujiente de gambas.</figcaption>
                 </figure>
 
                 <figure class="details__gallery-card">
-                    <img class="details__gallery-image" src="../assets/images/tempura3.jpg"
-                        alt="Bol de tempura crujiente variada.">
+                    <picture>
+                        <source srcset="../assets/images/tempura3.jpg?as=webp&width=400 400w, 
+                                    ../assets/images/tempura3.jpg?as=webp&width=800 800w,
+                                    ../assets/images/tempura3.jpg?as=webp&width=1200 1200w"
+                            sizes="(max-width: 768px) 50vw, (max-width: 1200px) 100vw, 300px" type="image/webp">
+                        <img class="details__gallery-image" src="../assets/images/tempura3.jpg?width=600"
+                            alt="Bol de tempura crujiente variada." loading="lazy">
+                    </picture>
                     <figcaption class="details__gallery-caption">Bol de tempura crujiente variada.</figcaption>
                 </figure>
             </div>

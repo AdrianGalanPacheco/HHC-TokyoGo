@@ -29,7 +29,8 @@
         visibility: visible;
     }
 
-    &__menu, &__spacer {
+    &__menu,
+    &__spacer {
         width: 40px;
     }
 
@@ -55,6 +56,7 @@
         box-shadow: 4px 0 20px variables.$color-shadow;
         padding: 2rem 1.5rem;
         z-index: 2;
+        transition: left 0.4s ease-in-out, transform 0.4s ease-in-out;
 
         &-close {
             position: absolute;
@@ -77,10 +79,21 @@
                     text-decoration: none;
                     color: variables.$color-text-header;
                     font-size: 1.2rem;
+                    transition: transform 0.3s ease, color 0.3s ease;
 
                     &.is-active {
                         font-weight: 700;
                         color: variables.$color-accent;
+                    }
+
+                    &:focus-visible {
+                        color: variables.$color-accent;
+                        outline: 2px solid variables.$color-accent;
+                        outline-offset: 4px;
+                    }
+
+                    &:hover {
+                        transform: scale(1.1);
                     }
                 }
             }
@@ -96,6 +109,21 @@
         background-color: variables.$color-overlay-header;
         opacity: 0;
         visibility: hidden;
+        transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+    }
+
+    &__menu,
+    &__sidebar-close {
+        cursor: pointer;
+
+        &:focus-visible {
+            outline: 2px solid variables.$color-accent;
+            outline-offset: 4px;
+        }
+
+        &:hover {
+            outline: none;
+        }
     }
 }
 
@@ -136,7 +164,8 @@
                 font-size: 5rem;
                 display: inline-block;
 
-                &:hover {
+                &:hover,
+                &:focus-visible {
                     transform: scale(1.2);
                 }
             }
@@ -168,6 +197,11 @@
                         font-size: 2rem;
 
                         &:hover {
+                            font-weight: 700;
+                        }
+
+                        &:hover,
+                        &:focus-visible {
                             transform: scale(1.2);
                             font-weight: 700;
                         }

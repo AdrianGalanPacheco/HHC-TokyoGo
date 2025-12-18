@@ -1,7 +1,28 @@
 @use "../variables";
 
+/* Animations */
+@keyframes rotate {
+    0% { transform: rotate(0deg) scale(1); fill: variables.$color-icon-home; }
+    50% { transform: rotate(5deg) scale(1.05); fill: variables.$color-primary; } 
+    100% { transform: rotate(0deg) scale(1); fill: variables.$color-icon-home; }
+}
+
+@keyframes pulse {
+    0%,
+    100% {
+        opacity: 0.5;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.8;
+        transform: scale(1.05);
+    }
+}
+
 /* Mobile */
 .home-header {
+    position: relative;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -12,6 +33,58 @@
     background-color: variables.$color-bg-home;
     color: variables.$color-text-home;
     text-align: center;
+    overflow: hidden;
+
+    &__visual {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        z-index: 0;
+        opacity: 0.8;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            animation: pulse 10s ease-in-out infinite alternate;
+        }
+    }
+
+    &__clip-container {
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+    }
+
+    &__svg-icon {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 150px;
+        height: 150px;
+        z-index: 1;
+        opacity: 0.5;
+    }
+
+    .animated-torii {
+        width: 100%;
+        height: 100%;
+
+        path {
+            fill: variables.$color-icon-home;
+            animation: rotate 6s ease-in-out infinite alternate;
+            stroke: none;
+            stroke-dasharray: none;
+        }
+    }
+
+    &__container,
+    &__nav,
+    .separator {
+        z-index: 2;
+    }
 
     &__title {
         font-size: 4rem;
@@ -40,10 +113,18 @@
                 text-decoration: none;
                 color: variables.$color-text-home;
                 font-weight: 700;
+                transition: transform 0.3s ease, color 0.3s ease;
 
                 i {
                     margin-right: 0.5rem;
                     color: variables.$color-icon-home;
+                }       
+
+                &:focus-visible {
+                    outline: 2px solid variables.$color-icon-home;
+                    outline-offset: 4px;
+                    color: variables.$color-icon-home;
+                    transform: scale(1.1);
                 }
             }
         }
@@ -52,12 +133,19 @@
 
 .separator--home-header {
     background-color: variables.$color-separator-home;
+    z-index: 2;
 }
 
 /* Tablet */
 @media (min-width: variables.$mqTablet) {
     .home-header {
         padding-bottom: 10vh;
+
+        &__svg-icon {
+            width: 200px;
+            height: 200px;
+            top: 45%;
+        }
 
         &__title {
             font-size: 5rem;
@@ -83,12 +171,18 @@
 /* Desktop */
 @media (min-width: variables.$mqDesktop) {
     .home-header {
-        
+
+        &__svg-icon {
+            width: 250px;
+            height: 250px;
+            top: 50%;
+        }
+
         &__title {
             font-size: 10rem;
             margin-bottom: 0;
         }
-        
+
 
         &__list {
             display: flex;
@@ -97,7 +191,7 @@
             a:hover {
                 cursor: pointer;
                 transform: scale(1.2);
-                color: variables.$color-lnk-hover;
+                color: variables.$color-icon-home;
             }
         }
     }

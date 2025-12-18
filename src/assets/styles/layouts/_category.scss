@@ -2,7 +2,7 @@
 
 /* Mobile */
 .category {
-    padding: 10vh 1.5vw 0;
+    padding: calc(10vh + 1rem) 1.5vw 0;
     max-width: 1200px;
     margin: auto;
 
@@ -44,10 +44,27 @@
         display: flex;
         flex-direction: column;
         height: 100%;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        &:hover,
+        &:focus-within {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px variables.$color-shadow;
+            cursor: pointer;
+        }
 
         a {
             text-decoration: none;
             color: variables.$color-text;
+        }
+
+        .button {
+            transition: transform 0.3s ease;
+            
+            &:focus-visible {
+                outline: 3px solid variables.$color-primary;
+                outline-offset: 4px;
+            }
         }
 
         &__image {
@@ -76,7 +93,7 @@
 }
 
 article {
-    align-self: normal;
+    align-self: center;
 }
 
 .separator--category {
@@ -86,7 +103,7 @@ article {
 /* Tablet */
 @media (min-width: variables.$mqTablet) {
     .category {
-        padding: 10vh 3vw 0;
+        padding: calc(10vh + 2rem) 3vw 0;
 
         &__title {
             font-size: 3.5rem;
@@ -100,12 +117,18 @@ article {
             justify-items: center;
         }
     }
+
+    article {
+        align-self: stretch;
+        width: 100%;
+        height: 100%;
+    }
 }
 
 /* Desktop */
 @media (min-width: variables.$mqDesktop) {
     .category {
-        padding: 40vh 5vw 0;
+        padding: calc(20vh + 10rem) 5vw 0;
 
         &__title {
             font-size: 4rem;

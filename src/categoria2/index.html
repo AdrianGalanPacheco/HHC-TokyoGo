@@ -19,10 +19,14 @@
 </head>
 
 <body>
+
+  <!-- Skip link -->
+  <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
+
   <!-- Header -->
   <include src="./src/assets/views/header.html"></include>
 
-  <main class="category">
+  <main class="category" id="main-content">
 
     <!-- Intro -->
     <section class="category__intro">
@@ -42,7 +46,15 @@
 
         <article>
           <li class="category-card">
-            <img class="category-card__image" src="../assets/images/ichiranramen.jpg" alt="Sala de Ichiran Ramen.">
+            <!-- Responsive image -->
+            <picture>
+              <source srcset="../assets/images/ichiranramen.jpg?as=webp&width=400 400w,
+              ../assets/images/ichiranramen.jpg?as=webp&width=800 800w,
+              ../assets/images/ichiranramen.jpg?as=webp&width=1200 1200w"
+                sizes="(max-width: 768px) 90vw, (max-width: 1200px) 45vw, 30vw" type="image/webp">
+              <img class="category-card__image" src="../assets/images/ichiranramen.jpg?width=800"
+                alt="Sala de Ichiran Ramen." loading="lazy">
+            </picture>
             <!-- Card info -->
             <div class="category-card__content">
               <h2 class="category-card__title">Ichiran Ramen</h2>
@@ -56,7 +68,15 @@
 
         <article>
           <li class="category-card">
-            <img class="category-card__image" src="../assets/images/omoideyokocho.jpg" alt="Callejón Omoide Yokocho.">
+            <!-- Responsive image -->
+            <picture>
+              <source srcset="../assets/images/omoideyokocho.jpg?as=webp&width=400 400w,
+              ../assets/images/omoideyokocho.jpg?as=webp&width=800 800w,
+              ../assets/images/omoideyokocho.jpg?as=webp&width=1200 1200w"
+                sizes="(max-width: 768px) 90vw, (max-width: 1200px) 45vw, 30vw" type="image/webp">
+              <img class="category-card__image" src="../assets/images/omoideyokocho.jpg?width=800"
+                alt="Callejón Omoide Yokocho." loading="lazy">
+            </picture>
             <!-- Card info -->
             <div class="category-card__content">
               <h2 class="category-card__title">Omoide Yokocho (Izakayas)</h2>
@@ -70,7 +90,15 @@
 
         <article>
           <li class="category-card">
-            <img class="category-card__image" src="../assets/images/sanmichele.jpg" alt="Fachada de San Michele.">
+            <!-- Responsive image -->
+            <picture>
+              <source srcset="../assets/images/sanmichele.jpg?as=webp&width=400 400w,
+              ../assets/images/sanmichele.jpg?as=webp&width=800 800w,
+              ../assets/images/sanmichele.jpg?as=webp&width=1200 1200w"
+                sizes="(max-width: 768px) 90vw, (max-width: 1200px) 45vw, 30vw" type="image/webp">
+              <img class="category-card__image" src="../assets/images/sanmichele.jpg?width=800"
+                alt="Fachada de San Michele." loading="lazy">
+            </picture>
             <!-- Card info -->
             <div class="category-card__content">
               <h2 class="category-card__title">San Michele</h2>
@@ -83,7 +111,15 @@
 
         <article>
           <li class="category-card">
-            <img class="category-card__image" src="../assets/images/toromasa.jpg" alt="Fachada de Toro Masa.">
+            <!-- Responsive image -->
+            <picture>
+              <source srcset="../assets/images/toromasa.jpg?as=webp&width=400 400w,
+              ../assets/images/toromasa.jpg?as=webp&width=800 800w,
+              ../assets/images/toromasa.jpg?as=webp&width=1200 1200w"
+                sizes="(max-width: 768px) 90vw, (max-width: 1200px) 45vw, 30vw" type="image/webp">
+              <img class="category-card__image" src="../assets/images/toromasa.jpg?width=800"
+                alt="Fachada de Toro Masa." loading="lazy">
+            </picture>
             <!-- Card info -->
             <div class="category-card__content">
               <h2 class="category-card__title">Toro Masa</h2>

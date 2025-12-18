@@ -2,7 +2,7 @@
 
 /* Mobile */
 .links {
-    padding: 10vh 1.5vw 5vh;
+    padding: calc(10vh + 1rem) 1.5vw 5vh;
     max-width: 1200px;
     margin: auto;
 
@@ -48,6 +48,16 @@
             a {
                 text-decoration: none;
                 color: variables.$color-accent;
+                transition: transform 0.3s ease, color 0.3s ease;
+
+                &:hover {
+                    color: variables.$color-lnk-hover;
+                }
+
+                &:focus-visible {
+                    outline: 2px solid variables.$color-accent;
+                    outline-offset: 4px;
+                }
             }
         }
     }
@@ -60,7 +70,7 @@
 /* Tablet */
 @media (min-width: variables.$mqTablet) {
     .links {
-        padding: 10vh 3vw 5vh;
+        padding: calc(10vh + 2rem) 3vw 5vh;
 
         &__title {
             font-size: 3.5rem;
@@ -81,7 +91,7 @@
 /* Desktop */
 @media (min-width: variables.$mqDesktop) {
     .links {
-        padding: 40vh 5vw 5vh;
+        padding: calc(20vh + 10rem) 5vw 0;
 
         &__title {
             font-size: 4rem;

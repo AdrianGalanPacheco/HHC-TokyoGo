@@ -20,15 +20,26 @@
 
 <body>
 
+    <!-- Skip link -->
+    <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
+
     <!-- Header -->
     <include src="./src/assets/views/header.html"></include>
 
-    <main class="details">
+    <main class="details" id="main-content">
 
         <!-- Intro -->
         <section class="details__intro">
             <h1 class="details__title">Ramen</h1>
-            <img class="details__image" src="../assets/images/ramen.jpg" alt="Un tazón de ramen.">
+            <!-- Responsive images -->
+            <picture>
+                <source media="(max-width: 767px)" srcset="../assets/images/ramen.jpg?width=600&height=600&as=webp"
+                    type="image/webp">
+                <source media="(min-width: 768px)" srcset="../assets/images/ramen.jpg?width=1200&as=webp"
+                    type="image/webp">
+                <img class="details__image" src="../assets/images/ramen.jpg?width=800" alt="Un tazón de ramen."
+                    loading="eager">
+            </picture>
             <div class="details__info">
                 <p>El ramen es mucho más que una simple sopa de fideos; es un universo culinario, una obsesión nacional
                     y una forma de arte. Originario de China, este plato fue adaptado y perfeccionado en Japón hasta
@@ -50,19 +61,40 @@
         <section class="details__gallery">
             <h2 class="details__subtitle">Galería</h2>
             <div class="details__gallery-cards">
+                <!-- Responsive images -->
                 <figure class="details__gallery-card">
-                    <img class="details__gallery-image" src="../assets/images/ramen1.jpg"
-                        alt="Tazón de ramen con naruto.">
+                    <picture>
+                        <source srcset="../assets/images/ramen1.jpg?as=webp&width=400 400w, 
+                                    ../assets/images/ramen1.jpg?as=webp&width=800 800w,
+                                    ../assets/images/ramen1.jpg?as=webp&width=1200 1200w"
+                            sizes="(max-width: 768px) 50vw, (max-width: 1200px) 100vw, 300px" type="image/webp">
+                        <img class="details__gallery-image" src="../assets/images/ramen1.jpg?width=600"
+                            alt="Tazón de ramen con naruto." loading="lazy">
+                    </picture>
                     <figcaption class="details__gallery-caption">Ramen con naruto.</figcaption>
                 </figure>
 
                 <figure class="details__gallery-card">
-                    <img class="details__gallery-image" src="../assets/images/ramen2.jpg" alt="Tazón de ramen de cerdo.">
+                    <picture>
+                        <source srcset="../assets/images/ramen2.jpg?as=webp&width=400 400w, 
+                                    ../assets/images/ramen2.jpg?as=webp&width=800 800w,
+                                    ../assets/images/ramen2.jpg?as=webp&width=1200 1200w"
+                            sizes="(max-width: 768px) 50vw, (max-width: 1200px) 100vw, 300px" type="image/webp">
+                        <img class="details__gallery-image" src="../assets/images/ramen2.jpg?width=600"
+                            alt="Tazón de ramen de cerdo." loading="lazy">
+                    </picture>
                     <figcaption class="details__gallery-caption">Tazón de ramen de cerdo.</figcaption>
                 </figure>
 
                 <figure class="details__gallery-card">
-                    <img class="details__gallery-image" src="../assets/images/ramen3.jpg" alt="Tazón de ramen.">
+                    <picture>
+                        <source srcset="../assets/images/ramen3.jpg?as=webp&width=400 400w, 
+                                    ../assets/images/ramen3.jpg?as=webp&width=800 800w,
+                                    ../assets/images/ramen3.jpg?as=webp&width=1200 1200w"
+                            sizes="(max-width: 768px) 50vw, (max-width: 1200px) 100vw, 300px" type="image/webp">
+                        <img class="details__gallery-image" src="../assets/images/ramen3.jpg?width=600"
+                            alt="Tazón de ramen." loading="lazy">
+                    </picture>
                     <figcaption class="details__gallery-caption">Tazón de ramen.</figcaption>
                 </figure>
             </div>

@@ -2,7 +2,7 @@
 
 /* Mobile */
 .details {
-    padding: 10vh 1.5vw 0;
+    padding: calc(10vh + 1rem) 1.5vw 0;
     max-width: 1200px;
     margin: auto;
 
@@ -26,6 +26,7 @@
         max-width: 800px;
         border-radius: variables.$border-radius;
         box-shadow: variables.$box-shadow;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     &__gallery {
@@ -52,6 +53,17 @@
             flex-direction: column;
             height: 100%;
             margin: 0;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+            &:hover {
+                transform: scale(1.05);
+                box-shadow: 0 8px 15px variables.$color-shadow;
+            }
+
+            &:focus-within {
+                outline: 3px solid variables.$color-accent;
+                outline-offset: 4px;
+            }
         }
 
         &-image {
@@ -68,7 +80,7 @@
             width: 100%;
             text-align: center;
             color: #fff;
-            background-color: rgba(0, 0, 0, 0.5);
+            background-color: variables.$color-overlay-header;
         }
     }
 
@@ -114,14 +126,14 @@
 /* Tablet */
 @media (min-width: variables.$mqTablet) {
     .details {
-        padding: 10vh 3vw 0;
+        padding: calc(10vh + 2rem) 3vw 0;
 
         &__title {
             font-size: 3.5rem;
         }
 
         &__gallery {
-           
+
             &-cards {
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
@@ -142,14 +154,14 @@
 /* Desktop */
 @media (min-width: variables.$mqDesktop) {
     .details {
-        padding: 40vh 5vw 0;
+        padding: calc(20vh + 10rem) 5vw 0;
 
         &__title {
             font-size: 4rem;
         }
 
         &__gallery {
-           
+
             &-cards {
                 grid-template-columns: repeat(3, 1fr);
                 gap: 3rem;

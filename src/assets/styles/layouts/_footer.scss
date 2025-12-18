@@ -34,6 +34,17 @@
             a {
                 text-decoration: none;
                 color: variables.$color-text-footer;
+                transition: color 0.3s ease, transform 0.3s ease;
+
+                &:focus-visible {
+                    color: variables.$color-lnk-hover;
+                    outline: 2px solid variables.$color-primary;
+                    outline-offset: 4px;
+                }
+
+                &:hover {
+                    color: variables.$color-lnk-hover;
+                }
             }
         }
     }
@@ -46,6 +57,19 @@
 
     &__social-icon {
         color: variables.$color-icon-footer;
+        transition: color 0.3s ease, transform 0.3s ease;
+
+        &:hover,
+        &:focus-visible {
+            color: variables.$color-lnk-hover;
+            transform: scale(1.1);
+            outline: 2px solid variables.$color-primary;
+            outline-offset: 4px;
+        }
+
+        &:hover {
+            outline: none;
+        }
     }
 
     &__bottom {
@@ -106,21 +130,21 @@
                 display: inline-block;
             }
 
-            a:hover {
+            a:hover i,
+            a:focus-visible i {
                 cursor: pointer;
                 color: variables.$color-lnk-hover;
                 transform: scale(1.2);
+            }
+
+            a:focus-visible {
+                outline: 2px solid variables.$color-accent;
+                outline-offset: 4px;
             }
         }
 
         &__social-icons {
             flex-direction: row;
-
-            i:hover {
-                cursor: pointer;
-                color: variables.$color-lnk-hover;
-                transform: scale(1.2);
-            }
         }
 
         &__bottom {

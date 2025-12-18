@@ -25,6 +25,7 @@
         "parcel": "^2.16.0",
         "posthtml-alt-always": "^1.0.1",
         "posthtml-include": "^2.0.1",
-        "rimraf": "^6.0.1"
+        "rimraf": "^6.0.1",
+        "sharp": "^0.33.5"
     }
 }

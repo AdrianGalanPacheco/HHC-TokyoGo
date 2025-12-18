@@ -47,6 +47,27 @@ body {
   }
 }
 
+.skip-link {
+  position: absolute;
+  top: auto;
+  left: -10000000px;
+  background-color: variables.$color-primary;
+  color: variables.$color-bg;
+  padding: 8px 15px;
+  z-index: 9999;
+  font-weight: 700;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  transition: top 0.3s ease-in-out;
+
+  &:focus-visible {
+    position: static;
+    width: auto;
+    height: fit-content;
+  }
+}
+
 /* Tablet */
 @media (min-width: variables.$mqTablet) {
   body {

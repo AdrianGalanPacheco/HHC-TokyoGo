@@ -20,10 +20,13 @@
 
 <body>
 
+    <!-- Skip link -->
+    <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
+
     <!-- Header -->
     <include src="./src/assets/views/header.html"></include>
 
-    <main class="category">
+    <main class="category" id="main-content">
 
         <!-- Intro -->
         <section class="category__intro">
@@ -44,8 +47,15 @@
 
                 <article>
                     <li class="category-card">
-                        <img class="category-card__image" src="../assets/images/sensoji.jpg"
-                            alt="Puerta Kaminarimon del Templo Senso-ji con su gran farolillo rojo.">
+                        <!-- Responsive image -->
+                        <picture>
+                            <source srcset="../assets/images/sensoji.jpg?as=webp&width=400 400w,
+                            ../assets/images/sensoji.jpg?as=webp&width=800 800w,
+                            ../assets/images/sensoji.jpg?as=webp&width=1200 1200w"
+                                sizes="(max-width: 768px) 90vw, (max-width: 1200px) 45vw, 30vw" type="image/webp">
+                            <img class="category-card__image" src="../assets/images/sensoji.jpg?width=800"
+                                alt="Puerta Kaminarimon del Templo Senso-ji con su gran farolillo rojo." loading="lazy">
+                        </picture>
                         <!-- Card info -->
                         <div class="category-card__content">
                             <h2 class="category-card__title">Templo Senso-ji</h2>
@@ -59,8 +69,16 @@
 
                 <article>
                     <li class="category-card">
-                        <img class="category-card__image" src="../assets/images/meijijingu.jpg"
-                            alt="Gran puerta torii de madera a la entrada del Santuario Meiji Jingu.">
+                        <!-- Responsive image -->
+                        <picture>
+                            <source srcset="../assets/images/meijijingu.jpg?as=webp&width=400 400w,
+                            ../assets/images/meijijingu.jpg?as=webp&width=800 800w,
+                            ../assets/images/meijijingu.jpg?as=webp&width=1200 1200w"
+                                sizes="(max-width: 768px) 90vw, (max-width: 1200px) 45vw, 30vw" type="image/webp">
+                            <img class="category-card__image" src="../assets/images/meijijingu.jpg?width=800"
+                                alt="Gran puerta torii de madera a la entrada del Santuario Meiji Jingu."
+                                loading="lazy">
+                        </picture>
                         <!-- Card info -->
                         <div class="category-card__content">
                             <h2 class="category-card__title">Santuario Meiji Jingu</h2>
@@ -73,8 +91,15 @@
 
                 <article>
                     <li class="category-card">
-                        <img class="category-card__image" src="../assets/images/zojoji.jpg"
-                            alt="Templo Zojoji con la Torre de Tokio roja y blanca de fondo.">
+                        <!-- Responsive image -->
+                        <picture>
+                            <source srcset="../assets/images/zojoji.jpg?as=webp&width=400 400w,
+                            ../assets/images/zojoji.jpg?as=webp&width=800 800w,
+                            ../assets/images/zojoji.jpg?as=webp&width=1200 1200w"
+                                sizes="(max-width: 768px) 90vw, (max-width: 1200px) 45vw, 30vw" type="image/webp">
+                            <img class="category-card__image" src="../assets/images/zojoji.jpg?width=800"
+                                alt="Templo Zojoji con la Torre de Tokio roja y blanca de fondo." loading="lazy">
+                        </picture>
                         <!-- Card info -->
                         <div class="category-card__content">
                             <h2 class="category-card__title">Templo Zojoji</h2>
@@ -88,8 +113,15 @@
 
                 <article>
                     <li class="category-card">
-                        <img class="category-card__image" src="../assets/images/kandamyojin.jpg"
-                            alt="El colorido pabellón principal del Santuario Kanda Myojin.">
+                        <!-- Responsive image -->
+                        <picture>
+                            <source srcset="../assets/images/kandamyojin.jpg?as=webp&width=400 400w,
+                            ../assets/images/kandamyojin.jpg?as=webp&width=800 800w,
+                            ../assets/images/kandamyojin.jpg?as=webp&width=1200 1200w"
+                                sizes="(max-width: 768px) 90vw, (max-width: 1200px) 45vw, 30vw" type="image/webp">
+                            <img class="category-card__image" src="../assets/images/kandamyojin.jpg?width=800"
+                                alt="El colorido pabellón principal del Santuario Kanda Myojin." loading="lazy">
+                        </picture>
                         <!-- Card info -->
                         <div class="category-card__content">
                             <h2 class="category-card__title">Santuario Kanda Myojin</h2>
