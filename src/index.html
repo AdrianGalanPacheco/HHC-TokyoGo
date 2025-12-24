@@ -15,6 +15,7 @@
 
   <link rel="stylesheet" href="../node_modules/normalize.css/normalize.css">
   <link rel="stylesheet" href="./assets/styles/style.scss">
+  <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
 
 </head>
 
@@ -30,9 +31,11 @@
       <!-- Image -->
       <div class="home-header__visual home-header__clip-container">
         <picture>
-          <source srcset="./assets/images/tokyo-header.jpg?as=webp" type="image/webp">
+          <source srcset="./assets/images/tokyo-header.jpg?as=webp&width=400 400w,
+          ./assets/images/tokyo-header.jpg?as=webp&width=800 800w,
+          ./assets/images/tokyo-header.jpg?as=webp&width=1200 1200w" sizes="100vw" type="image/webp">
           <img src="./assets/images/tokyo-header.jpg" alt="Imagen de la ciudad de Tokio"
-            class="home-header__clip-image">
+            class="home-header__clip-image" fetchpriority="high">
         </picture>
       </div>
 
