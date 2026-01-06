@@ -92,10 +92,6 @@
     }
 }
 
-article {
-    align-self: center;
-}
-
 .separator--category {
     background-color: variables.$color-separator;
 }
@@ -116,12 +112,6 @@ article {
             margin: 3rem auto 5rem;
             justify-items: center;
         }
-    }
-
-    article {
-        align-self: stretch;
-        width: 100%;
-        height: 100%;
     }
 }
 
