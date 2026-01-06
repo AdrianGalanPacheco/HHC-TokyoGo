@@ -2,26 +2,36 @@
 
 /* Mobile */
 .category {
-    padding: calc(10vh + 1rem) 1.5vw 0;
+    padding: calc(10vh + 2rem) 1.5rem 2rem;
     max-width: 1200px;
-    margin: auto;
+    margin: 0 auto;
+    width: 100%;
 
     &__intro {
         text-align: center;
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-bottom: 3rem;
+        padding-bottom: 2rem;
+        border-bottom: 3px solid variables.$color-separator;
+        width: 100%;
     }
 
     &__title {
-        font-size: 3rem;
+        font-size: clamp(2.5rem, 5vw, 4rem);
         font-weight: 700;
-        margin-bottom: 1vh;
+        margin-bottom: 1rem;
         color: variables.$color-primary;
+        line-height: 1.2;
+        font-family: variables.$font-family-serif;
     }
 
     &__subtitle {
-        max-width: 600px;
+        max-width: 65ch;
+        margin: 0 auto;
+        font-size: 1.1rem;
+        opacity: 0.9;
     }
 
     &__cards-container {
@@ -29,14 +39,15 @@
         flex-direction: column;
         align-items: center;
         gap: 2rem;
-        margin-bottom: 5vh;
-        margin-top: 2vh;
-        padding: 0 2vh;
+        list-style: none;
+        padding: 0;
+        margin: 0;
     }
 
     &-card {
+        background-color: variables.$color-bg;
         width: 100%;
-        max-width: 360px;
+        max-width: 400px;
         border-radius: variables.$border-radius;
         box-shadow: variables.$box-shadow;
         overflow: hidden;
@@ -45,32 +56,25 @@
         flex-direction: column;
         height: 100%;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
+        will-change: transform;
 
-        &:hover,
-        &:focus-within {
+        &:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 15px variables.$color-shadow;
-            cursor: pointer;
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
         }
 
-        a {
-            text-decoration: none;
-            color: variables.$color-text;
-        }
-
-        .button {
-            transition: transform 0.3s ease;
-            
-            &:focus-visible {
-                outline: 3px solid variables.$color-primary;
-                outline-offset: 4px;
-            }
+        &:focus-within {
+            outline: 2px solid variables.$color-primary;
+            outline-offset: 4px;
+            transform: translateY(-5px);
         }
 
         &__image {
             height: 200px;
             width: 100%;
             object-fit: cover;
+            display: block;
+            background-color: #eee;
         }
 
         &__content {
@@ -78,39 +82,57 @@
             display: flex;
             flex-direction: column;
             flex-grow: 1;
+            gap: 1rem;
+            text-align: left;
         }
 
         &__title {
+            font-size: 1.5rem;
             font-weight: 700;
             color: variables.$color-secondary;
             margin: 0;
+            line-height: 1.2;
         }
 
         &__description {
+            margin: 0;
             flex-grow: 1;
+            color: variables.$color-text;
+            font-size: 0.95rem;
+        }
+
+        .button {
+            align-self: flex-start;
+            margin-top: auto;
+
+            &:focus-visible {
+                outline: 3px solid variables.$color-primary;
+                outline-offset: 2px;
+            }
         }
     }
-}
-
-.separator--category {
-    background-color: variables.$color-separator;
 }
 
 /* Tablet */
 @media (min-width: variables.$mqTablet) {
     .category {
-        padding: calc(10vh + 2rem) 3vw 0;
+        padding: calc(10vh + 3rem) 2rem 4rem;
 
-        &__title {
-            font-size: 3.5rem;
+        &__intro {
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         &__cards-container {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 2.5rem;
-            margin: 3rem auto 5rem;
-            justify-items: center;
+            gap: 2rem;
+            justify-items: stretch;
+        }
+
+        &-card {
+            max-width: none;
         }
     }
 }
@@ -118,15 +140,7 @@
 /* Desktop */
 @media (min-width: variables.$mqDesktop) {
     .category {
-        padding: calc(20vh + 10rem) 5vw 0;
-
-        &__title {
-            font-size: 4rem;
-        }
-
-        &__subtitle {
-            max-width: 800px;
-        }
+        padding-top: 2rem;
 
         &__cards-container {
             grid-template-columns: repeat(3, 1fr);
@@ -134,7 +148,14 @@
         }
 
         &-card {
-            max-width: none;
+            &__image {
+                height: 240px;
+                transition: transform 0.5s ease;
+            }
+
+            &:hover &__image {
+                transform: scale(1.05);
+            }
         }
     }
 }

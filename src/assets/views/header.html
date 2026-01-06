@@ -1,28 +1,45 @@
 <header class="header">
-    <input type="checkbox" id="menu" class="header__checkbox">
+    <input type="checkbox" id="menu" class="header__checkbox" aria-hidden="true">
 
-    <!-- Menu icon -->
-    <label for="menu" class="header__menu">
-        <i class="fa-solid fa-bars"></i>
+    <label for="menu" class="header__menu" role="button" aria-label="Abrir menú de navegación">
+        <i class="fa-solid fa-bars" aria-hidden="true"></i>
     </label>
 
-    <h2 class="header__title"><a href="/">TokyoGo!</a></h2>
+    <div class="header__title">
+        <a href="/" aria-label="TokyoGo! - Volver al inicio">TokyoGo!</a>
+    </div>
 
     <div class="header__spacer"></div>
 
-    <!-- Hidden menu -->
-    <nav class="header__sidebar">
-        <label for="menu" class="header__sidebar-close">
-            <i class="fa-solid fa-xmark"></i>
+    <nav class="header__sidebar" aria-label="Navegación principal">
+
+        <label for="menu" class="header__sidebar-close" role="button" aria-label="Cerrar menú">
+            <i class="fa-solid fa-xmark" aria-hidden="true"></i>
         </label>
 
         <ul class="header__sidebar-list">
-            <li><a href="/categoria"><i class="fa-solid fa-utensils"></i>Gastronomía</a></li>
-            <li><a href="/categoria2"><i class="fa-solid fa-store"></i>Restaurantes</a></li>
-            <li><a href="/categoria3"><i class="fa-solid fa-torii-gate"></i>Templos</a></li>
-            <li><a href="/links"><i class="fa-solid fa-link"></i>Enlaces</a></li>
+            <li>
+                <a href="/categoria">
+                    <i class="fa-solid fa-utensils" aria-hidden="true"></i> Gastronomía
+                </a>
+            </li>
+            <li>
+                <a href="/categoria2">
+                    <i class="fa-solid fa-store" aria-hidden="true"></i> Restaurantes
+                </a>
+            </li>
+            <li>
+                <a href="/categoria3">
+                    <i class="fa-solid fa-torii-gate" aria-hidden="true"></i> Templos
+                </a>
+            </li>
+            <li>
+                <a href="/links">
+                    <i class="fa-solid fa-link" aria-hidden="true"></i> Enlaces
+                </a>
+            </li>
         </ul>
     </nav>
 
-    <label for="menu" class="header__overlay"></label>
+    <label for="menu" class="header__overlay" aria-hidden="true"></label>
 </header>

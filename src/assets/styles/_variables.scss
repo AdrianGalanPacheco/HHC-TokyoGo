@@ -1,11 +1,11 @@
 @use "sass:color";
 
-$font-family-sans-serif: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$font-family-sans-serif: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 $font-family-serif: "Merriweather", "Georgia", "Times New Roman", serif;
 
 $color-primary: #b93732;
 $color-secondary: #324432;
-$color-accent: #e58c9f;
+$color-accent: #ff708f;
 $color-bg: #fdfcf6;
 $color-text: #343434;
 $color-separator: #d1d1d1;
@@ -20,7 +20,7 @@ $color-lnk-hover: color.scale($color-primary, $lightness: -10%);
 $color-bg-home: $color-accent;
 $color-text-home: $color-bg;
 $color-separator-home: $color-primary;
-$color-icon-home: color.scale($color-accent, $lightness: 70%);
+$color-icon-home: color.scale($color-accent, $lightness: 90%);
 
 $color-bg-header: $color-secondary;
 $color-text-header: $color-bg;
@@ -28,7 +28,7 @@ $color-overlay-header: rgba(0, 0, 0, 0.35);
 
 $color-bg-footer: $color-secondary;
 $color-text-footer: $color-bg;
-$color-separator-footer: color.scale($color-secondary, $lightness: -20%);
+$color-separator-footer: color.scale($color-secondary, $lightness: -80%);
 $color-icon-footer: color.scale($color-secondary, $lightness: 60%);
 
 $mqMobile: 360px;

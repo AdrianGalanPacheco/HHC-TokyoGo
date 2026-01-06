@@ -8,125 +8,124 @@
   <title>TokyoGo! | Restaurantes</title>
   <meta name="author" content="Adrián Galán Pacheco">
   <meta name="description"
-    content="TokyoGo!: Encuentra los mejores restaurantes de Tokio. Desde izakayas ocultas y barras de sushi de fama mundial hasta cafés temáticos. Tu guía para saber dónde comer.">
+    content="Encuentra los mejores restaurantes de Tokio: Ichiran Ramen, Izakayas en Omoide Yokocho y alta cocina. Guía gastronómica.">
 
-  <!-- Icono creado por Ehtisham Abid - Flaticon: https://www.flaticon.com/free-icons/architecture-and-city -->
+  <meta property="og:title" content="TokyoGo! | Restaurantes en Tokio">
+  <meta property="og:description"
+    content="Desde izakayas ocultas hasta sushi de alta gama. Descubre dónde comer en Tokio.">
+  <meta property="og:image" content="../assets/images/ichiranramen.jpg">
+  <meta property="og:type" content="article">
+
   <link rel="icon" href="../assets/images/flaticon.png" type="image/png">
 
   <link rel="stylesheet" href="../../node_modules/normalize.css/normalize.css">
-  <link rel="stylesheet" href="../assets/styles/style.scss">
-
+  <link rel="stylesheet" href="../assets/styles/category.scss">
 </head>
 
 <body>
 
-  <!-- Skip link -->
   <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
 
-  <!-- Header -->
   <include src="./src/assets/views/header.html"></include>
 
-  <main class="category" id="main-content">
+  <main id="main-content" class="category">
 
-    <!-- Intro -->
     <section class="category__intro">
       <h1 class="category__title">Restaurantes</h1>
       <p class="category__subtitle">Tokio es un paraíso para los amantes de la buena mesa, donde la tradición japonesa
         convive con la alta cocina internacional. Esta es nuestra selección de experiencias culinarias que no te puedes
-        perder.
-      </p>
-
-      <span class="separator separator--category"></span>
+        perder.</p>
 
     </section>
 
-    <!-- Cards -->
     <section>
       <ul class="category__cards-container">
 
-          <li class="category-card">
-            <!-- Responsive image -->
-            <picture>
-              <source srcset="../assets/images/ichiranramen.jpg?as=webp&width=400 400w,
-              ../assets/images/ichiranramen.jpg?as=webp&width=800 800w,
-              ../assets/images/ichiranramen.jpg?as=webp&width=1200 1200w"
-                sizes="(max-width: 768px) 90vw, (max-width: 1200px) 45vw, 30vw" type="image/webp">
-              <img class="category-card__image" src="../assets/images/ichiranramen.jpg?width=800"
-                alt="Sala de Ichiran Ramen." loading="lazy" fetchpriority="high">
-            </picture>
-            <!-- Card info -->
-            <div class="category-card__content">
-              <h2 class="category-card__title">Ichiran Ramen</h2>
-              <p class="category-card__description">La experiencia definitiva para amantes del ramen. Famoso por sus
-                cabinas
-                de concentración individuales y un tonkotsu que roza la perfección.</p>
-              <a href="#" class="button">Ver más</a>
-            </div>
-          </li>
+        <li class="category-card">
+          <picture>
+            <source
+              srcset="../assets/images/ichiranramen.jpg?as=avif&width=400 400w, ../assets/images/ichiranramen.jpg?as=avif&width=800 800w, ../assets/images/ichiranramen.jpg?as=avif&width=1200 1200w"
+              sizes="(max-width: 768px) 90vw, (max-width: 1200px) 45vw, 30vw" type="image/avif">
+            <source
+              srcset="../assets/images/ichiranramen.jpg?as=webp&width=400 400w, ../assets/images/ichiranramen.jpg?as=webp&width=800 800w, ../assets/images/ichiranramen.jpg?as=webp&width=1200 1200w"
+              sizes="(max-width: 768px) 90vw, (max-width: 1200px) 45vw, 30vw" type="image/webp">
 
-          <li class="category-card">
-            <!-- Responsive image -->
-            <picture>
-              <source srcset="../assets/images/omoideyokocho.jpg?as=webp&width=400 400w,
-              ../assets/images/omoideyokocho.jpg?as=webp&width=800 800w,
-              ../assets/images/omoideyokocho.jpg?as=webp&width=1200 1200w"
-                sizes="(max-width: 768px) 90vw, (max-width: 1200px) 45vw, 30vw" type="image/webp">
-              <img class="category-card__image" src="../assets/images/omoideyokocho.jpg?width=800"
-                alt="Callejón Omoide Yokocho." loading="lazy">
-            </picture>
-            <!-- Card info -->
-            <div class="category-card__content">
-              <h2 class="category-card__title">Omoide Yokocho (Izakayas)</h2>
-              <p class="category-card__description">Viaja al Tokio de la posguerra en este nostálgico callejón. Un
-                laberinto
-                de pequeñas izakayas que sirven yakitori y cerveza fría.</p>
-              <a href="#" class="button">Ver más</a>
-            </div>
-          </li>
+            <img class="category-card__image" src="../assets/images/ichiranramen.jpg?width=800"
+              alt="Cabinas individuales de concentración en Ichiran Ramen" width="800" height="600"
+              fetchpriority="high">
+          </picture>
+          <div class="category-card__content">
+            <h2 class="category-card__title">Ichiran Ramen</h2>
+            <p class="category-card__description">La experiencia definitiva para amantes del ramen. Famoso por sus
+              cabinas de concentración individuales y un tonkotsu perfecto.</p>
+            <a href="#" class="button">Ver más <span class="visually-hidden">sobre Ichiran Ramen</span></a>
+          </div>
+        </li>
 
-          <li class="category-card">
-            <!-- Responsive image -->
-            <picture>
-              <source srcset="../assets/images/sanmichele.jpg?as=webp&width=400 400w,
-              ../assets/images/sanmichele.jpg?as=webp&width=800 800w,
-              ../assets/images/sanmichele.jpg?as=webp&width=1200 1200w"
-                sizes="(max-width: 768px) 90vw, (max-width: 1200px) 45vw, 30vw" type="image/webp">
-              <img class="category-card__image" src="../assets/images/sanmichele.jpg?width=800"
-                alt="Fachada de San Michele." loading="lazy">
-            </picture>
-            <!-- Card info -->
-            <div class="category-card__content">
-              <h2 class="category-card__title">San Michele</h2>
-              <p class="category-card__description">Una joya italiana en el corazón de Tokio. Disfruta de pasta fresca y
-                platos clásicos con un servicio impecable y vistas espectaculares.</p>
-              <a href="#" class="button">Ver más</a>
-            </div>
-          </li>
+        <li class="category-card">
+          <picture>
+            <source
+              srcset="../assets/images/omoideyokocho.jpg?as=avif&width=400 400w, ../assets/images/omoideyokocho.jpg?as=avif&width=800 800w, ../assets/images/omoideyokocho.jpg?as=avif&width=1200 1200w"
+              sizes="(max-width: 768px) 90vw, (max-width: 1200px) 45vw, 30vw" type="image/avif">
+            <source
+              srcset="../assets/images/omoideyokocho.jpg?as=webp&width=400 400w, ../assets/images/omoideyokocho.jpg?as=webp&width=800 800w, ../assets/images/omoideyokocho.jpg?as=webp&width=1200 1200w"
+              sizes="(max-width: 768px) 90vw, (max-width: 1200px) 45vw, 30vw" type="image/webp">
 
-          <li class="category-card">
-            <!-- Responsive image -->
-            <picture>
-              <source srcset="../assets/images/toromasa.jpg?as=webp&width=400 400w,
-              ../assets/images/toromasa.jpg?as=webp&width=800 800w,
-              ../assets/images/toromasa.jpg?as=webp&width=1200 1200w"
-                sizes="(max-width: 768px) 90vw, (max-width: 1200px) 45vw, 30vw" type="image/webp">
-              <img class="category-card__image" src="../assets/images/toromasa.jpg?width=800"
-                alt="Fachada de Toro Masa." loading="lazy">
-            </picture>
-            <!-- Card info -->
-            <div class="category-card__content">
-              <h2 class="category-card__title">Toro Masa</h2>
-              <p class="category-card__description">Alta cocina japonesa centrada en el atún de la más alta calidad. Una
-                experiencia de sushi y sashimi sublime para una ocasión especial.</p>
-              <a href="#" class="button">Ver más</a>
-            </div>
-          </li>
+            <img class="category-card__image" src="../assets/images/omoideyokocho.jpg?width=800"
+              alt="Farolillos rojos iluminando el callejón de Omoide Yokocho" width="800" height="600" loading="lazy">
+          </picture>
+          <div class="category-card__content">
+            <h2 class="category-card__title">Omoide Yokocho</h2>
+            <p class="category-card__description">Viaja al Tokio de la posguerra. Un laberinto nostálgico de pequeñas
+              izakayas que sirven yakitori y cerveza fría.</p>
+            <a href="#" class="button">Ver más <span class="visually-hidden">sobre Omoide Yokocho</span></a>
+          </div>
+        </li>
+
+        <li class="category-card">
+          <picture>
+            <source
+              srcset="../assets/images/sanmichele.jpg?as=avif&width=400 400w, ../assets/images/sanmichele.jpg?as=avif&width=800 800w, ../assets/images/sanmichele.jpg?as=avif&width=1200 1200w"
+              sizes="(max-width: 768px) 90vw, (max-width: 1200px) 45vw, 30vw" type="image/avif">
+            <source
+              srcset="../assets/images/sanmichele.jpg?as=webp&width=400 400w, ../assets/images/sanmichele.jpg?as=webp&width=800 800w, ../assets/images/sanmichele.jpg?as=webp&width=1200 1200w"
+              sizes="(max-width: 768px) 90vw, (max-width: 1200px) 45vw, 30vw" type="image/webp">
+
+            <img class="category-card__image" src="../assets/images/sanmichele.jpg?width=800"
+              alt="Elegante interior del restaurante italiano San Michele" width="800" height="600" loading="lazy">
+          </picture>
+          <div class="category-card__content">
+            <h2 class="category-card__title">San Michele</h2>
+            <p class="category-card__description">Una joya italiana en el corazón de Tokio. Disfruta de pasta fresca y
+              platos clásicos con un servicio impecable.</p>
+            <a href="#" class="button">Ver más <span class="visually-hidden">sobre San Michele</span></a>
+          </div>
+        </li>
+
+        <li class="category-card">
+          <picture>
+            <source
+              srcset="../assets/images/toromasa.jpg?as=avif&width=400 400w, ../assets/images/toromasa.jpg?as=avif&width=800 800w, ../assets/images/toromasa.jpg?as=avif&width=1200 1200w"
+              sizes="(max-width: 768px) 90vw, (max-width: 1200px) 45vw, 30vw" type="image/avif">
+            <source
+              srcset="../assets/images/toromasa.jpg?as=webp&width=400 400w, ../assets/images/toromasa.jpg?as=webp&width=800 800w, ../assets/images/toromasa.jpg?as=webp&width=1200 1200w"
+              sizes="(max-width: 768px) 90vw, (max-width: 1200px) 45vw, 30vw" type="image/webp">
+
+            <img class="category-card__image" src="../assets/images/toromasa.jpg?width=800"
+              alt="Chef preparando sushi de atún en Toro Masa" width="800" height="600" loading="lazy">
+          </picture>
+          <div class="category-card__content">
+            <h2 class="category-card__title">Toro Masa</h2>
+            <p class="category-card__description">Alta cocina japonesa centrada en el atún de la más alta calidad. Una
+              experiencia de sushi y sashimi sublime.</p>
+            <a href="#" class="button">Ver más <span class="visually-hidden">sobre Toro Masa</span></a>
+          </div>
+        </li>
 
       </ul>
     </section>
   </main>
 
-  <!-- Footer -->
   <include src="./src/assets/views/footer.html"></include>
 
   <script defer type="module" src="../assets/scripts/main.js"></script>

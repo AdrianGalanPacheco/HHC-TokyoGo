@@ -5,80 +5,114 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>TokyoGo! | Enlaces</title>
+    <title>TokyoGo! | Créditos y Enlaces</title>
     <meta name="author" content="Adrián Galán Pacheco">
     <meta name="description"
-        content="TokyoGo!: Fuentes, atribuciones y herramientas utilizadas para la creación de TokyoGo!. Consulta los créditos de contenido, imágenes y tecnologías.">
+        content="Créditos y fuentes de TokyoGo!: Atribuciones de contenido, imágenes (Unsplash), iconos (Flaticon) y tecnologías utilizadas.">
 
-    <!-- Icono creado por Ehtisham Abid - Flaticon: https://www.flaticon.com/free-icons/architecture-and-city -->
+    <meta property="og:title" content="TokyoGo! | Créditos">
+    <meta property="og:description" content="Fuentes y herramientas utilizadas en este proyecto.">
+    <meta property="og:type" content="website">
+
     <link rel="icon" href="../assets/images/flaticon.png" type="image/png">
 
     <link rel="stylesheet" href="../../node_modules/normalize.css/normalize.css">
-    <link rel="stylesheet" href="../assets/styles/style.scss">
-
+    <link rel="stylesheet" href="../assets/styles/links.scss">
 </head>
 
 <body>
 
-    <!-- Header -->
+    <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
+
     <include src="./src/assets/views/header.html"></include>
 
-    <main class="links">
+    <main class="links" id="main-content">
 
-        <!-- Intro -->
         <section class="links__intro">
-            <h1 class="links__title">Enlaces</h1>
-            <p class="links__subtitle">En esta sección se documentan todas las fuentes de contenido, imágenes,
-                herramientas y librerías utilizadas para la creación de este sitio web.</p>
-            <span class="separator separator--links"></span>
+            <h1 class="links__title">Enlaces y Créditos</h1>
+            <p class="links__subtitle">Documentación de fuentes de contenido, recursos gráficos y librerías de código
+                abierto utilizadas para la creación de TokyoGo!.</p>
+
         </section>
 
-        <!-- Links -->
         <div class="links__container">
 
-            <!-- Content sources -->
             <section class="links__section">
-                <h2 class="links__section-title">Fuentes de contenido</h2>
-                <p>El contenido textual de las páginas de detalle se ha elaborado a partir de la información general
-                    disponible en las siguientes fuentes de referencia:</p>
+                <h2 class="links__section-title">
+                    <i class="fa-solid fa-book" aria-hidden="true"></i> Fuentes de contenido
+                </h2>
+                <p>La información turística y gastronómica ha sido sintetizada de las siguientes referencias:</p>
                 <ul class="links__list">
-                    <li><a href="https://www.getyourguide.es/explorer/tokyo-ttd193/food-in-tokyo/"
-                            target="_blank">GetYourGuide - Food in Tokyo</a></li>
-                    <li><a href="https://japonpedia.com/comer-en-tokio/" target="_blank">Japonpedia - Comer en Tokio</a>
+                    <li>
+                        <a href="https://www.getyourguide.es/explorer/tokyo-ttd193/food-in-tokyo/" target="_blank"
+                            rel="noopener noreferrer">
+                            GetYourGuide - Food in Tokyo <i class="fa-solid fa-arrow-up-right-from-square"
+                                aria-hidden="true"></i>
+                        </a>
                     </li>
-                    <li><a href="https://japonpedia.com/templos-santuarios-tokio/" target="_blank">Japonpedia - Templos
-                            y Santuarios de Tokio</a></li>
+                    <li>
+                        <a href="https://japonpedia.com/comer-en-tokio/" target="_blank" rel="noopener noreferrer">
+                            Japonpedia - Comer en Tokio <i class="fa-solid fa-arrow-up-right-from-square"
+                                aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://japonpedia.com/templos-santuarios-tokio/" target="_blank"
+                            rel="noopener noreferrer">
+                            Japonpedia - Templos y Santuarios <i class="fa-solid fa-arrow-up-right-from-square"
+                                aria-hidden="true"></i>
+                        </a>
+                    </li>
                 </ul>
             </section>
 
-            <!-- Media sources -->
             <section class="links__section">
-                <h2 class="links__section-title">Atribuciones de imágenes y multimedia</h2>
-                <p>Los recursos visuales utilizados en este proyecto provienen de las siguientes plataformas:</p>
+                <h2 class="links__section-title">
+                    <i class="fa-solid fa-image" aria-hidden="true"></i> Multimedia
+                </h2>
                 <ul class="links__list">
-                    <li>Imágenes libres de derechos obtenidas de <a href="https://unsplash.com/es"
-                            target="_blank">Unsplash</a>.</li>
-                    <li>Favicon descargado desde <a href="https://www.flaticon.com" target="_blank">Flaticon</a>.</li>
-                    <li>Vídeos incrustados obtenidos de <a href="https://www.youtube.com" target="_blank">YouTube</a>.
-                        Los derechos pertenecen a sus respectivos creadores.</li>
+                    <li>
+                        <strong>Fotografía:</strong> Imágenes libres de derechos de <a href="https://unsplash.com/es"
+                            target="_blank" rel="noopener noreferrer">Unsplash</a>.
+                    </li>
+                    <li>
+                        <strong>Iconos:</strong> Favicon y recursos gráficos de <a href="https://www.flaticon.com"
+                            target="_blank" rel="noopener noreferrer">Flaticon</a> (Autor: Ehtisham Abid).
+                    </li>
+                    <li>
+                        <strong>Vídeo:</strong> Embeds de <a href="https://www.youtube.com" target="_blank"
+                            rel="noopener noreferrer">YouTube</a> (Propiedad de sus respectivos canales).
+                    </li>
                 </ul>
             </section>
 
-            <!-- Imports sources -->
             <section class="links__section">
-                <h2 class="links__section-title">Tecnologías y librerías</h2>
-                <p>Este sitio web ha sido desarrollado utilizando las siguientes herramientas de código abierto:</p>
+                <h2 class="links__section-title">
+                    <i class="fa-solid fa-code" aria-hidden="true"></i> Tecnologías
+                </h2>
                 <ul class="links__list">
-                    <li><a href="https://basiclightbox.electerious.com/" target="_blank">basicLightbox</a> - Librería
-                        para galerías modales.</li>
-                    <li><a href="https://fontawesome.com/" target="_blank">FontAwesome</a> - Librería de iconos.</li>
+                    <li>
+                        <a href="https://parceljs.org/" target="_blank" rel="noopener noreferrer">Parcel Bundler</a> -
+                        Empaquetador de módulos.
+                    </li>
+                    <li>
+                        <a href="https://basiclightbox.electerious.com/" target="_blank"
+                            rel="noopener noreferrer">basicLightbox</a> - Galerías modales ligeras.
+                    </li>
+                    <li>
+                        <a href="https://fontawesome.com/" target="_blank" rel="noopener noreferrer">FontAwesome 6</a> -
+                        Iconografía vectorial.
+                    </li>
+                    <li>
+                        <a href="https://sass-lang.com/" target="_blank" rel="noopener noreferrer">Sass (SCSS)</a> -
+                        Preprocesador CSS.
+                    </li>
                 </ul>
             </section>
 
         </div>
     </main>
 
-    <!-- Footer -->
     <include src="./src/assets/views/footer.html"></include>
 
     <script defer type="module" src="../assets/scripts/main.js"></script>

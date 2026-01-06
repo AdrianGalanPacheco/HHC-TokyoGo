@@ -5,71 +5,74 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>TokyoGo!</title>
+  <title>TokyoGo! - Guía completa para viajar a Tokio</title>
   <meta name="author" content="Adrián Galán Pacheco">
   <meta name="description"
-    content="TokyoGo: Tu guía completa para viajar a Tokio. Descubre los mejores barrios, templos, gastronomía y consejos prácticos para planificar tu aventura inolvidable.">
+    content="TokyoGo: Descubre los mejores barrios, templos y gastronomía. Guía práctica y consejos para tu viaje a Tokio, Japón.">
 
-  <!-- Icono creado por Ehtisham Abid - Flaticon: https://www.flaticon.com/free-icons/architecture-and-city -->
+  <meta property="og:title" content="TokyoGo! - Guía de viaje a Tokio">
+  <meta property="og:description" content="Descubre los mejores barrios, templos y gastronomía de Tokio.">
+  <meta property="og:type" content="website">
+
   <link rel="icon" href="./assets/images/flaticon.png" type="image/png">
-
-  <link rel="stylesheet" href="./assets/styles/style.scss">
+  <link rel="stylesheet" href="./assets/styles/home.scss">
 </head>
 
 <body>
 
-  <!-- Skip link -->
   <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
 
+  <header class="home-header">
+
+    <div class="home-header__visual home-header__clip-container">
+      <picture>
+        <source srcset="./assets/images/tokyo-header.jpg?as=avif&width=600 600w, 
+                  ./assets/images/tokyo-header.jpg?as=avif&width=1200 1200w" sizes="(max-width: 600px) 100vw, 1200px"
+          type="image/avif">
+
+        <source srcset="./assets/images/tokyo-header.jpg?as=webp&width=600 600w, 
+                  ./assets/images/tokyo-header.jpg?as=webp&width=1200 1200w" sizes="(max-width: 600px) 100vw, 1200px"
+          type="image/webp">
+
+        <img src="./assets/images/tokyo-header.jpg?width=1200" alt="Vista panorámica de la ciudad de Tokio al atardecer"
+          width="1200" height="800" class="home-header__clip-image" fetchpriority="high" decoding="async">
+      </picture>
+    </div>
+
+    <div class="home-header__svg-icon">
+      <svg class="animated-torii" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" role="img" width="44"
+        height="50" aria-labelledby="iconTitle">
+        <title id="iconTitle">Icono animado de Templo Japonés</title>
+        <path fill="currentColor"
+          d="M0 96L0 28.5C0 21.6 5.6 16 12.5 16 14.8 16 17 16.6 19 17.8L58 41.2C82.9 56.1 111.3 64 140.3 64l167.4 0c29 0 57.5-7.9 82.3-22.8l39-23.4c1.9-1.2 4.2-1.8 6.4-1.8 6.9 0 12.5 5.6 12.5 12.5L448 96c0 35.3-28.7 64-64 64l0 64 16 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-16 0 0 192c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-192-192 0 0 192c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-192-16 0c-17.7 0-32-14.3-32-32s14.3-32 32-32l16 0 0-64C28.7 160 0 131.3 0 96zM128 224l64 0 0-64-64 0 0 64zm128 0l64 0 0-64-64 0 0 64z" />
+      </svg>
+    </div>
+
+    <div class="home-header__container">
+      <h1 class="home-header__title">TokyoGo!</h1>
+      <p class="home-header__subtitle">Tu guía completa para viajar a Tokio</p>
+    </div>
+
+    <hr class="separator separator--home-header">
+
+    <nav class="home-header__nav" aria-label="Navegación principal">
+      <ul class="home-header__list">
+        <li><a href="./categoria/index.html"><i class="fa-solid fa-utensils" aria-hidden="true"></i> Gastronomía</a>
+        </li>
+        <li><a href="./categoria2/index.html"><i class="fa-solid fa-store" aria-hidden="true"></i> Restaurantes</a></li>
+        <li><a href="./categoria3/index.html"><i class="fa-solid fa-torii-gate" aria-hidden="true"></i> Templos</a></li>
+        <li><a href="./links/index.html"><i class="fa-solid fa-link" aria-hidden="true"></i> Enlaces</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
   <main id="main-content">
-
-    <header class="home-header">
-
-      <!-- Image -->
-      <div class="home-header__visual home-header__clip-container">
-        <picture>
-          <source srcset="./assets/images/tokyo-header.jpg?as=webp" type="image/webp">
-          <img src="./assets/images/tokyo-header.jpg" alt="Imagen de la ciudad de Tokio"
-            class="home-header__clip-image" fetchpriority="high">
-        </picture>
-      </div>
-
-      <!-- SVG Icon -->
-      <div class="home-header__svg-icon">
-        <!--Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
-        <svg class="animated-torii" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" role="img"
-          aria-labelledby="iconTitle">
-          <title id="iconTitle">Icono de Templo Japonés animado</title>
-          <path
-            d="M0 96L0 28.5C0 21.6 5.6 16 12.5 16 14.8 16 17 16.6 19 17.8L58 41.2C82.9 56.1 111.3 64 140.3 64l167.4 0c29 0 57.5-7.9 82.3-22.8l39-23.4c1.9-1.2 4.2-1.8 6.4-1.8 6.9 0 12.5 5.6 12.5 12.5L448 96c0 35.3-28.7 64-64 64l0 64 16 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-16 0 0 192c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-192-192 0 0 192c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-192-16 0c-17.7 0-32-14.3-32-32s14.3-32 32-32l16 0 0-64C28.7 160 0 131.3 0 96zM128 224l64 0 0-64-64 0 0 64zm128 0l64 0 0-64-64 0 0 64z" />
-        </svg>
-      </div>
-
-      <!--  Intro -->
-      <div class="home-header__container">
-        <h1 class="home-header__title">TokyoGo!</h1>
-        <p class="home-header__subtitle">Tu guía completa para viajar a Tokio</p>
-      </div>
-
-      <span class="separator separator--home-header"></span>
-
-      <!-- Nav -->
-      <nav class="home-header__nav">
-        <ul class="home-header__list">
-          <li><a href="./categoria/index.html"><i class="fa-solid fa-utensils"></i>Gastronomía</a></li>
-          <li><a href="./categoria2/index.html"><i class="fa-solid fa-store"></i>Restaurantes</a></li>
-          <li><a href="./categoria3/index.html"><i class="fa-solid fa-torii-gate"></i>Templos</a></li>
-          <li><a href="./links/index.html"><i class="fa-solid fa-link"></i>Enlaces</a></li>
-        </ul>
-      </nav>
-
-    </header>
   </main>
 
-  <!-- Footer -->
   <include src="./src/assets/views/footer.html"></include>
 
-  <script defer type="module" src="./assets/scripts/main.js"></script>
+  <script type="module" src="./assets/scripts/main.js"></script>
 </body>
 
 </html>

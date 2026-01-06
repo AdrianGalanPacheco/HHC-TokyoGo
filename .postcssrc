@@ -1,0 +1,22 @@
+{
+  "plugins": {
+    "@fullhuman/postcss-purgecss": {
+      "content": [
+        "./src/**/*.html",
+        "./src/**/*.js"
+      ],
+      "safelist": {
+        "standard": [
+          "body",
+          "html",
+          "fa",
+          "fas",
+          "fab",
+          "fa-solid",
+          "fa-brands"
+        ],
+        "greedy": []
+      }
+    }
+  }
+}

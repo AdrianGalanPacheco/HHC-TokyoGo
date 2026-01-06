@@ -5,131 +5,131 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>TokyoGo! | Templos</title>
+    <title>TokyoGo! | Templos y Santuarios</title>
     <meta name="author" content="Adrián Galán Pacheco">
     <meta name="description"
-        content="TokyoGo!: Descubre la paz y la historia en los templos y santuarios más importantes de Tokio. Guía del Senso-ji, Meiji Jingu y los tesoros espirituales de la capital japonesa.">
+        content="TokyoGo!: Guía de los templos más importantes de Tokio. Visita Senso-ji, Meiji Jingu y descubre la paz espiritual de Japón.">
 
-    <!-- Icono creado por Ehtisham Abid - Flaticon: https://www.flaticon.com/free-icons/architecture-and-city -->
+    <meta property="og:title" content="TokyoGo! | Templos de Tokio">
+    <meta property="og:description"
+        content="Descubre la paz y la historia en los templos y santuarios más importantes de la capital.">
+    <meta property="og:image" content="../assets/images/sensoji.jpg">
+    <meta property="og:type" content="article">
+
     <link rel="icon" href="../assets/images/flaticon.png" type="image/png">
 
     <link rel="stylesheet" href="../../node_modules/normalize.css/normalize.css">
-    <link rel="stylesheet" href="../assets/styles/style.scss">
-
+    <link rel="stylesheet" href="../assets/styles/category.scss">
 </head>
 
 <body>
 
-    <!-- Skip link -->
     <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
 
-    <!-- Header -->
     <include src="./src/assets/views/header.html"></include>
 
-    <main class="category" id="main-content">
+    <main id="main-content" class="category">
 
-        <!-- Intro -->
         <section class="category__intro">
             <h1 class="category__title">Templos</h1>
             <p class="category__subtitle">En medio del bullicio futurista de Tokio, se esconden oasis de paz y
                 tradición.
                 Estos templos y santuarios son ventanas al alma espiritual de Japón, lugares donde el tiempo parece
-                detenerse.
-            </p>
-
-            <span class="separator separator--category"></span>
+                detenerse.</p>
 
         </section>
 
-        <!-- Cards -->
         <section>
             <ul class="category__cards-container">
 
-                    <li class="category-card">
-                        <!-- Responsive image -->
-                        <picture>
-                            <source srcset="../assets/images/sensoji.jpg?as=webp&width=400 400w,
-                            ../assets/images/sensoji.jpg?as=webp&width=800 800w,
-                            ../assets/images/sensoji.jpg?as=webp&width=1200 1200w"
-                                sizes="(max-width: 768px) 90vw, (max-width: 1200px) 45vw, 30vw" type="image/webp">
-                            <img class="category-card__image" src="../assets/images/sensoji.jpg?width=800"
-                                alt="Puerta Kaminarimon del Templo Senso-ji con su gran farolillo rojo." loading="lazy" fetchpriority="high">
-                        </picture>
-                        <!-- Card info -->
-                        <div class="category-card__content">
-                            <h2 class="category-card__title">Templo Senso-ji</h2>
-                            <p class="category-card__description">El templo más antiguo y visitado de Tokio. Un icono
-                                imprescindible en el corazón de Asakusa, famoso por su puerta Kaminarimon y la calle
-                                Nakamise-dori.</p>
-                            <a href="#" class="button">Ver más</a>
-                        </div>
-                    </li>
+                <li class="category-card">
+                    <picture>
+                        <source
+                            srcset="../assets/images/sensoji.jpg?as=avif&width=400 400w, ../assets/images/sensoji.jpg?as=avif&width=800 800w, ../assets/images/sensoji.jpg?as=avif&width=1200 1200w"
+                            sizes="(max-width: 768px) 90vw, (max-width: 1200px) 45vw, 30vw" type="image/avif">
+                        <source
+                            srcset="../assets/images/sensoji.jpg?as=webp&width=400 400w, ../assets/images/sensoji.jpg?as=webp&width=800 800w, ../assets/images/sensoji.jpg?as=webp&width=1200 1200w"
+                            sizes="(max-width: 768px) 90vw, (max-width: 1200px) 45vw, 30vw" type="image/webp">
 
-                    <li class="category-card">
-                        <!-- Responsive image -->
-                        <picture>
-                            <source srcset="../assets/images/meijijingu.jpg?as=webp&width=400 400w,
-                            ../assets/images/meijijingu.jpg?as=webp&width=800 800w,
-                            ../assets/images/meijijingu.jpg?as=webp&width=1200 1200w"
-                                sizes="(max-width: 768px) 90vw, (max-width: 1200px) 45vw, 30vw" type="image/webp">
-                            <img class="category-card__image" src="../assets/images/meijijingu.jpg?width=800"
-                                alt="Gran puerta torii de madera a la entrada del Santuario Meiji Jingu."
-                                loading="lazy">
-                        </picture>
-                        <!-- Card info -->
-                        <div class="category-card__content">
-                            <h2 class="category-card__title">Santuario Meiji Jingu</h2>
-                            <p class="category-card__description">Un remanso de paz dedicado al Emperador Meiji. Un
-                                inmenso bosque en medio de la ciudad que te aísla por completo del bullicio urbano.</p>
-                            <a href="#" class="button">Ver más</a>
-                        </div>
-                    </li>
+                        <img class="category-card__image" src="../assets/images/sensoji.jpg?width=800"
+                            alt="Enorme farolillo rojo en la puerta Kaminarimon del Templo Senso-ji" width="800"
+                            height="600" fetchpriority="high">
+                    </picture>
+                    <div class="category-card__content">
+                        <h2 class="category-card__title">Templo Senso-ji</h2>
+                        <p class="category-card__description">El templo más antiguo y visitado de Tokio. Un icono
+                            imprescindible en el corazón de Asakusa, famoso por su puerta Kaminarimon.</p>
+                        <a href="#" class="button">Ver más <span class="visually-hidden">sobre Senso-ji</span></a>
+                    </div>
+                </li>
 
-                    <li class="category-card">
-                        <!-- Responsive image -->
-                        <picture>
-                            <source srcset="../assets/images/zojoji.jpg?as=webp&width=400 400w,
-                            ../assets/images/zojoji.jpg?as=webp&width=800 800w,
-                            ../assets/images/zojoji.jpg?as=webp&width=1200 1200w"
-                                sizes="(max-width: 768px) 90vw, (max-width: 1200px) 45vw, 30vw" type="image/webp">
-                            <img class="category-card__image" src="../assets/images/zojoji.jpg?width=800"
-                                alt="Templo Zojoji con la Torre de Tokio roja y blanca de fondo." loading="lazy">
-                        </picture>
-                        <!-- Card info -->
-                        <div class="category-card__content">
-                            <h2 class="category-card__title">Templo Zojoji</h2>
-                            <p class="category-card__description">Un importante templo budista que ofrece la vista más
-                                icónica de la Torre de Tokio, creando un impresionante contraste entre lo antiguo y lo
-                                moderno.</p>
-                            <a href="#" class="button">Ver más</a>
-                        </div>
-                    </li>
+                <li class="category-card">
+                    <picture>
+                        <source
+                            srcset="../assets/images/meijijingu.jpg?as=avif&width=400 400w, ../assets/images/meijijingu.jpg?as=avif&width=800 800w, ../assets/images/meijijingu.jpg?as=avif&width=1200 1200w"
+                            sizes="(max-width: 768px) 90vw, (max-width: 1200px) 45vw, 30vw" type="image/avif">
+                        <source
+                            srcset="../assets/images/meijijingu.jpg?as=webp&width=400 400w, ../assets/images/meijijingu.jpg?as=webp&width=800 800w, ../assets/images/meijijingu.jpg?as=webp&width=1200 1200w"
+                            sizes="(max-width: 768px) 90vw, (max-width: 1200px) 45vw, 30vw" type="image/webp">
 
-                    <li class="category-card">
-                        <!-- Responsive image -->
-                        <picture>
-                            <source srcset="../assets/images/kandamyojin.jpg?as=webp&width=400 400w,
-                            ../assets/images/kandamyojin.jpg?as=webp&width=800 800w,
-                            ../assets/images/kandamyojin.jpg?as=webp&width=1200 1200w"
-                                sizes="(max-width: 768px) 90vw, (max-width: 1200px) 45vw, 30vw" type="image/webp">
-                            <img class="category-card__image" src="../assets/images/kandamyojin.jpg?width=800"
-                                alt="El colorido pabellón principal del Santuario Kanda Myojin." loading="lazy">
-                        </picture>
-                        <!-- Card info -->
-                        <div class="category-card__content">
-                            <h2 class="category-card__title">Santuario Kanda Myojin</h2>
-                            <p class="category-card__description">El guardián espiritual de Akihabara. Un vibrante
-                                santuario donde la tradición sintoísta se encuentra con la cultura pop, ofreciendo
-                                amuletos para proteger tus dispositivos electrónicos.</p>
-                            <a href="#" class="button">Ver más</a>
-                        </div>
-                    </li>
+                        <img class="category-card__image" src="../assets/images/meijijingu.jpg?width=800"
+                            alt="Gran puerta torii de madera en la entrada boscosa de Meiji Jingu" width="800"
+                            height="600" loading="lazy">
+                    </picture>
+                    <div class="category-card__content">
+                        <h2 class="category-card__title">Santuario Meiji Jingu</h2>
+                        <p class="category-card__description">Un remanso de paz dedicado al Emperador Meiji. Un inmenso
+                            bosque en medio de la ciudad que te aísla por completo.</p>
+                        <a href="#" class="button">Ver más <span class="visually-hidden">sobre Meiji Jingu</span></a>
+                    </div>
+                </li>
+
+                <li class="category-card">
+                    <picture>
+                        <source
+                            srcset="../assets/images/zojoji.jpg?as=avif&width=400 400w, ../assets/images/zojoji.jpg?as=avif&width=800 800w, ../assets/images/zojoji.jpg?as=avif&width=1200 1200w"
+                            sizes="(max-width: 768px) 90vw, (max-width: 1200px) 45vw, 30vw" type="image/avif">
+                        <source
+                            srcset="../assets/images/zojoji.jpg?as=webp&width=400 400w, ../assets/images/zojoji.jpg?as=webp&width=800 800w, ../assets/images/zojoji.jpg?as=webp&width=1200 1200w"
+                            sizes="(max-width: 768px) 90vw, (max-width: 1200px) 45vw, 30vw" type="image/webp">
+
+                        <img class="category-card__image" src="../assets/images/zojoji.jpg?width=800"
+                            alt="Templo Zojoji tradicional con la moderna Torre de Tokio al fondo" width="800"
+                            height="600" loading="lazy">
+                    </picture>
+                    <div class="category-card__content">
+                        <h2 class="category-card__title">Templo Zojoji</h2>
+                        <p class="category-card__description">Importante templo budista que ofrece la vista más icónica
+                            de la Torre de Tokio, un contraste entre lo antiguo y lo moderno.</p>
+                        <a href="#" class="button">Ver más <span class="visually-hidden">sobre Zojoji</span></a>
+                    </div>
+                </li>
+
+                <li class="category-card">
+                    <picture>
+                        <source
+                            srcset="../assets/images/kandamyojin.jpg?as=avif&width=400 400w, ../assets/images/kandamyojin.jpg?as=avif&width=800 800w, ../assets/images/kandamyojin.jpg?as=avif&width=1200 1200w"
+                            sizes="(max-width: 768px) 90vw, (max-width: 1200px) 45vw, 30vw" type="image/avif">
+                        <source
+                            srcset="../assets/images/kandamyojin.jpg?as=webp&width=400 400w, ../assets/images/kandamyojin.jpg?as=webp&width=800 800w, ../assets/images/kandamyojin.jpg?as=webp&width=1200 1200w"
+                            sizes="(max-width: 768px) 90vw, (max-width: 1200px) 45vw, 30vw" type="image/webp">
+
+                        <img class="category-card__image" src="../assets/images/kandamyojin.jpg?width=800"
+                            alt="Pabellón principal del Santuario Kanda Myojin de colores vibrantes" width="800"
+                            height="600" loading="lazy">
+                    </picture>
+                    <div class="category-card__content">
+                        <h2 class="category-card__title">Santuario Kanda Myojin</h2>
+                        <p class="category-card__description">El guardián espiritual de Akihabara. Donde la tradición
+                            sintoísta se encuentra con la cultura pop.</p>
+                        <a href="#" class="button">Ver más <span class="visually-hidden">sobre Kanda Myojin</span></a>
+                    </div>
+                </li>
 
             </ul>
         </section>
     </main>
 
-    <!-- Footer -->
     <include src="./src/assets/views/footer.html"></include>
 
     <script defer type="module" src="../assets/scripts/main.js"></script>

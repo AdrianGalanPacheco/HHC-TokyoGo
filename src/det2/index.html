@@ -8,115 +8,129 @@
     <title>TokyoGo! | Tempura Crujiente</title>
     <meta name="author" content="Adrián Galán Pacheco">
     <meta name="description"
-        content="TokyoGo!: Descubre el arte de la tempura japonesa en Tokio. Aprende sobre su rebozado ligero, los ingredientes frescos y la técnica que lo convierte en una delicia crujiente.">
+        content="Descubre el arte de la tempura japonesa: ingredientes, la técnica del rebozado 'koromo' y cómo disfrutarla crujiente.">
 
-    <!-- Icono creado por Ehtisham Abid - Flaticon: https://www.flaticon.com/free-icons/architecture-and-city -->
+    <meta property="og:title" content="TokyoGo! | El arte de la Tempura">
+    <meta property="og:description" content="¿Por qué la tempura japonesa es tan ligera y crujiente? Descúbrelo aquí.">
+    <meta property="og:image" content="../assets/images/tempura.jpg">
+    <meta property="og:type" content="article">
+
     <link rel="icon" href="../assets/images/flaticon.png" type="image/png">
 
     <link rel="stylesheet" href="../../node_modules/normalize.css/normalize.css">
-    <link rel="stylesheet" href="../assets/styles/style.scss">
-
+    <link rel="stylesheet" href="../assets/styles/details.scss">
 </head>
 
 <body>
 
-    <!-- Skip link -->
     <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
 
-    <!-- Header -->
     <include src="./src/assets/views/header.html"></include>
 
     <main class="details" id="main-content">
 
-        <!-- Intro -->
         <section class="details__intro">
             <h1 class="details__title">Tempura Crujiente</h1>
-            <!-- Responsive images -->
+
             <picture>
+                <source media="(max-width: 767px)" srcset="../assets/images/tempura.jpg?width=600&height=600&as=avif"
+                    type="image/avif">
+                <source media="(min-width: 768px)" srcset="../assets/images/tempura.jpg?width=1200&as=avif"
+                    type="image/avif">
+
                 <source media="(max-width: 767px)" srcset="../assets/images/tempura.jpg?width=600&height=600&as=webp"
                     type="image/webp">
                 <source media="(min-width: 768px)" srcset="../assets/images/tempura.jpg?width=1200&as=webp"
                     type="image/webp">
-                <img class="details__image" src="../assets/images/tempura.jpg?width=800" alt="Plato de tempura."
-                    loading="eager" fetchpriority="high">
+
+                <img class="details__image" src="../assets/images/tempura.jpg?width=800"
+                    alt="Plato de tempura variada recién frita" width="800" height="600" loading="eager"
+                    fetchpriority="high">
             </picture>
+
             <div class="details__info">
                 <p>La tempura es uno de los platos más delicados de la cocina japonesa, una técnica que eleva la fritura
                     a la categoría de arte. A diferencia de otros fritos, la tempura se caracteriza por un rebozado
-                    increíblemente ligero y crujiente que realza el sabor natural de los ingredientes en lugar de
-                    ocultarlo.</p>
+                    increíblemente ligero y crujiente.</p>
+
+
+
                 <p>El secreto reside en su masa, o 'koromo', preparada con harina de trigo de bajo contenido en gluten,
-                    huevo y agua helada, que se mezcla mínimamente para evitar activar el gluten. Esta masa se aplica a
-                    mariscos frescos y verduras de temporada, que se fríen rápidamente en aceite caliente, creando una
-                    capa etérea que se deshace en la boca.</p>
-                <p>Tradicionalmente, la tempura se sirve caliente, justo al salir del aceite, acompañada de una salsa
-                    para mojar llamada 'tentsuyu', a base de dashi, mirin y salsa de soja, a la que se le añade jengibre
-                    y daikon rallado. Desde los puestos callejeros hasta los restaurantes con estrellas Michelin, probar
-                    una tempura bien hecha es una experiencia esencial en Tokio.</p>
+                    huevo y agua helada. Esta mezcla se agita mínimamente para evitar activar el gluten, creando esa
+                    textura etérea que se deshace en la boca.</p>
+                <p>Tradicionalmente, se sirve caliente acompañada de una salsa 'tentsuyu' (dashi, mirin y soja) con
+                    jengibre y daikon rallado. Una experiencia esencial en Tokio.</p>
             </div>
+
         </section>
 
-        <span class="separator separator--details"></span>
-
-        <!-- Gallery -->
         <section class="details__gallery">
             <h2 class="details__subtitle">Galería</h2>
             <div class="details__gallery-cards">
-                <!-- Responsive images -->
+
                 <figure class="details__gallery-card">
                     <picture>
-                        <source srcset="../assets/images/tempura1.jpg?as=webp&width=400 400w, 
-                                    ../assets/images/tempura1.jpg?as=webp&width=800 800w,
-                                    ../assets/images/tempura1.jpg?as=webp&width=1200 1200w"
-                            sizes="(max-width: 768px) 50vw, (max-width: 1200px) 100vw, 300px" type="image/webp">
+                        <source
+                            srcset="../assets/images/tempura1.jpg?as=avif&width=400 400w, ../assets/images/tempura1.jpg?as=avif&width=800 800w"
+                            sizes="(max-width: 768px) 50vw, 400px" type="image/avif">
+                        <source
+                            srcset="../assets/images/tempura1.jpg?as=webp&width=400 400w, ../assets/images/tempura1.jpg?as=webp&width=800 800w"
+                            sizes="(max-width: 768px) 50vw, 400px" type="image/webp">
+
                         <img class="details__gallery-image" src="../assets/images/tempura1.jpg?width=600"
-                            alt="Señora japonesa haciendo tempura crujiente." loading="lazy">
+                            alt="Señora japonesa cocinando tempura en un puesto tradicional" width="600" height="400"
+                            loading="lazy">
                     </picture>
-                    <figcaption class="details__gallery-caption">Señora cocinando tempura crujiente.</figcaption>
+                    <figcaption class="details__gallery-caption">Técnica tradicional de fritura.</figcaption>
                 </figure>
 
                 <figure class="details__gallery-card">
                     <picture>
-                        <source srcset="../assets/images/tempura2.jpg?as=webp&width=400 400w, 
-                                    ../assets/images/tempura2.jpg?as=webp&width=800 800w,
-                                    ../assets/images/tempura2.jpg?as=webp&width=1200 1200w"
-                            sizes="(max-width: 768px) 50vw, (max-width: 1200px) 100vw, 300px" type="image/webp">
+                        <source
+                            srcset="../assets/images/tempura2.jpg?as=avif&width=400 400w, ../assets/images/tempura2.jpg?as=avif&width=800 800w"
+                            sizes="(max-width: 768px) 50vw, 400px" type="image/avif">
+                        <source
+                            srcset="../assets/images/tempura2.jpg?as=webp&width=400 400w, ../assets/images/tempura2.jpg?as=webp&width=800 800w"
+                            sizes="(max-width: 768px) 50vw, 400px" type="image/webp">
+
                         <img class="details__gallery-image" src="../assets/images/tempura2.jpg?width=600"
-                            alt="Tempura crujiente de gambas." loading="lazy">
+                            alt="Tempura de gambas (Ebi Tempura)" width="600" height="400" loading="lazy">
                     </picture>
                     <figcaption class="details__gallery-caption">Tempura crujiente de gambas.</figcaption>
                 </figure>
 
                 <figure class="details__gallery-card">
                     <picture>
-                        <source srcset="../assets/images/tempura3.jpg?as=webp&width=400 400w, 
-                                    ../assets/images/tempura3.jpg?as=webp&width=800 800w,
-                                    ../assets/images/tempura3.jpg?as=webp&width=1200 1200w"
-                            sizes="(max-width: 768px) 50vw, (max-width: 1200px) 100vw, 300px" type="image/webp">
+                        <source
+                            srcset="../assets/images/tempura3.jpg?as=avif&width=400 400w, ../assets/images/tempura3.jpg?as=avif&width=800 800w"
+                            sizes="(max-width: 768px) 50vw, 400px" type="image/avif">
+                        <source
+                            srcset="../assets/images/tempura3.jpg?as=webp&width=400 400w, ../assets/images/tempura3.jpg?as=webp&width=800 800w"
+                            sizes="(max-width: 768px) 50vw, 400px" type="image/webp">
+
                         <img class="details__gallery-image" src="../assets/images/tempura3.jpg?width=600"
-                            alt="Bol de tempura crujiente variada." loading="lazy">
+                            alt="Bol de arroz con tempura variada (Tendon)" width="600" height="400" loading="lazy">
                     </picture>
-                    <figcaption class="details__gallery-caption">Bol de tempura crujiente variada.</figcaption>
+                    <figcaption class="details__gallery-caption">Bol de tempura variada.</figcaption>
                 </figure>
             </div>
         </section>
 
-        <span class="separator separator--details"></span>
-
-        <!-- Video -->
         <section class="details__videos">
             <h2 class="details__subtitle">Vídeos</h2>
             <div class="details__video-container">
-                <iframe class="details__video" src="https://www.youtube-nocookie.com/embed/EGxiKp_HX6U?si=aZbcl_rPjtlu2ok4"
+                <iframe class="details__video" width="560" height="315"
+                    src="https://www.youtube-nocookie.com/embed/EGxiKp_HX6U?si=aZbcl_rPjtlu2ok4"
+                    srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube-nocookie.com/embed/EGxiKp_HX6U?si=aZbcl_rPjtlu2ok4&autoplay=1><img src=https://img.youtube.com/vi/EGxiKp_HX6U/hqdefault.jpg alt='Cómo hacer tempura japonesa'><span>▶</span></a>"
                     title="Receta sobre cómo hacer tempura japonesa" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin" loading="lazy" allowfullscreen></iframe>
+                    referrerpolicy="strict-origin-when-cross-origin" loading="lazy" allowfullscreen>
+                </iframe>
             </div>
         </section>
 
     </main>
 
-    <!-- Footer -->
     <include src="./src/assets/views/footer.html"></include>
 
     <script defer type="module" src="../assets/scripts/main.js"></script>
