@@ -25,9 +25,9 @@ body {
   overflow-x: hidden;
 }
 
-h1 {
+:where(h1) {
+  margin-block: 0.67em;
   font-size: 2em;
-  margin: 0.67em 0;
 }
 
 img,
