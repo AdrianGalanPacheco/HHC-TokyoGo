@@ -2,120 +2,142 @@
 <html lang="es">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>TokyoGo! | Créditos y Enlaces</title>
-    <meta name="author" content="Adrián Galán Pacheco">
-    <meta name="description"
-        content="Créditos y fuentes de TokyoGo!: Atribuciones de contenido, imágenes (Unsplash), iconos (Flaticon) y tecnologías utilizadas.">
+  <!-- Title -->
+  <title>TokyoGo! | Créditos y Enlaces</title>
 
-    <meta property="og:title" content="TokyoGo! | Créditos">
-    <meta property="og:description" content="Fuentes y herramientas utilizadas en este proyecto.">
-    <meta property="og:type" content="website">
+  <!-- Meta information -->
+  <meta name="author" content="Adrián Galán Pacheco">
+  <meta name="description"
+    content="Créditos y fuentes de TokyoGo!: Atribuciones de contenido, imágenes (Unsplash), iconos (Flaticon) y tecnologías utilizadas.">
 
-    <link rel="icon" href="../assets/images/flaticon.png" type="image/png">
+  <meta property="og:title" content="TokyoGo! | Créditos">
+  <meta property="og:description" content="Fuentes y herramientas utilizadas en este proyecto.">
+  <meta property="og:type" content="website">
 
-    <link rel="stylesheet" href="../../node_modules/normalize.css/normalize.css">
-    <link rel="stylesheet" href="../assets/styles/links.scss">
+  <!-- Fonts display swap -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Merriweather:wght@400;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" href="../assets/images/flaticon.png" type="image/png">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../../node_modules/normalize.css/normalize.css">
+  <link rel="stylesheet" href="../assets/styles/links.scss">
 </head>
 
 <body>
 
-    <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
+  <!-- Skip link -->
+  <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
 
-    <include src="./src/assets/views/header.html"></include>
+  <include src="./src/assets/views/header.html"></include>
 
-    <main class="links" id="main-content">
+  <main class="links" id="main-content">
 
-        <section class="links__intro">
-            <h1 class="links__title">Enlaces y Créditos</h1>
-            <p class="links__subtitle">Documentación de fuentes de contenido, recursos gráficos y librerías de código
-                abierto utilizadas para la creación de TokyoGo!.</p>
+    <!-- Intro -->
+    <section class="links__intro">
+      <h1 class="links__title">Enlaces</h1>
+      <p class="links__subtitle">Documentación de fuentes de contenido, recursos gráficos y librerías de código
+        abierto utilizadas para la creación de TokyoGo!.</p>
+    </section>
 
-        </section>
+    <div class="links__container">
 
-        <div class="links__container">
+      <!-- Source links -->
+      <section class="links__section">
+        <h2 class="links__section-title">
+          <i class="fa-solid fa-book" aria-hidden="true"></i> Fuentes de contenido
+        </h2>
 
-            <section class="links__section">
-                <h2 class="links__section-title">
-                    <i class="fa-solid fa-book" aria-hidden="true"></i> Fuentes de contenido
-                </h2>
-                <p>La información turística y gastronómica ha sido sintetizada de las siguientes referencias:</p>
-                <ul class="links__list">
-                    <li>
-                        <a href="https://www.getyourguide.es/explorer/tokyo-ttd193/food-in-tokyo/" target="_blank"
-                            rel="noopener noreferrer">
-                            GetYourGuide - Food in Tokyo <i class="fa-solid fa-arrow-up-right-from-square"
-                                aria-hidden="true"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://japonpedia.com/comer-en-tokio/" target="_blank" rel="noopener noreferrer">
-                            Japonpedia - Comer en Tokio <i class="fa-solid fa-arrow-up-right-from-square"
-                                aria-hidden="true"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://japonpedia.com/templos-santuarios-tokio/" target="_blank"
-                            rel="noopener noreferrer">
-                            Japonpedia - Templos y Santuarios <i class="fa-solid fa-arrow-up-right-from-square"
-                                aria-hidden="true"></i>
-                        </a>
-                    </li>
-                </ul>
-            </section>
+        <p>La información turística y gastronómica ha sido sintetizada de las siguientes referencias:</p>
 
-            <section class="links__section">
-                <h2 class="links__section-title">
-                    <i class="fa-solid fa-image" aria-hidden="true"></i> Multimedia
-                </h2>
-                <ul class="links__list">
-                    <li>
-                        <strong>Fotografía:</strong> Imágenes libres de derechos de <a href="https://unsplash.com/es"
-                            target="_blank" rel="noopener noreferrer">Unsplash</a>.
-                    </li>
-                    <li>
-                        <strong>Iconos:</strong> Favicon y recursos gráficos de <a href="https://www.flaticon.com"
-                            target="_blank" rel="noopener noreferrer">Flaticon</a> (Autor: Ehtisham Abid).
-                    </li>
-                    <li>
-                        <strong>Vídeo:</strong> Embeds de <a href="https://www.youtube.com" target="_blank"
-                            rel="noopener noreferrer">YouTube</a> (Propiedad de sus respectivos canales).
-                    </li>
-                </ul>
-            </section>
+        <ul class="links__list">
+          <li>
+            <!-- noopener noreferrer to improve security when using target="_blank" -->
+            <a href="https://www.getyourguide.es/explorer/tokyo-ttd193/food-in-tokyo/" target="_blank"
+              rel="noopener noreferrer">
+              GetYourGuide - Food in Tokyo <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+            </a>
+          </li>
 
-            <section class="links__section">
-                <h2 class="links__section-title">
-                    <i class="fa-solid fa-code" aria-hidden="true"></i> Tecnologías
-                </h2>
-                <ul class="links__list">
-                    <li>
-                        <a href="https://parceljs.org/" target="_blank" rel="noopener noreferrer">Parcel Bundler</a> -
-                        Empaquetador de módulos.
-                    </li>
-                    <li>
-                        <a href="https://basiclightbox.electerious.com/" target="_blank"
-                            rel="noopener noreferrer">basicLightbox</a> - Galerías modales ligeras.
-                    </li>
-                    <li>
-                        <a href="https://fontawesome.com/" target="_blank" rel="noopener noreferrer">FontAwesome 6</a> -
-                        Iconografía vectorial.
-                    </li>
-                    <li>
-                        <a href="https://sass-lang.com/" target="_blank" rel="noopener noreferrer">Sass (SCSS)</a> -
-                        Preprocesador CSS.
-                    </li>
-                </ul>
-            </section>
+          <li>
+            <a href="https://japonpedia.com/comer-en-tokio/" target="_blank" rel="noopener noreferrer">
+              Japonpedia - Comer en Tokio <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+            </a>
+          </li>
 
-        </div>
-    </main>
+          <li>
+            <a href="https://japonpedia.com/templos-santuarios-tokio/" target="_blank" rel="noopener noreferrer">
+              Japonpedia - Templos y Santuarios <i class="fa-solid fa-arrow-up-right-from-square"
+                aria-hidden="true"></i>
+            </a>
+          </li>
+        </ul>
+      </section>
 
-    <include src="./src/assets/views/footer.html"></include>
+      <!-- Multimedia links -->
+      <section class="links__section">
+        <h2 class="links__section-title">
+          <i class="fa-solid fa-image" aria-hidden="true"></i> Multimedia
+        </h2>
 
-    <script defer type="module" src="../assets/scripts/main.js"></script>
+        <ul class="links__list">
+          <li>
+            <strong>Fotografía:</strong> Imágenes libres de derechos de <a href="https://unsplash.com/es"
+              target="_blank" rel="noopener noreferrer">Unsplash</a>.
+          </li>
+
+          <li>
+            <strong>Iconos:</strong> Favicon y recursos gráficos de <a href="https://www.flaticon.com" target="_blank"
+              rel="noopener noreferrer">Flaticon</a> (Autor: Ehtisham Abid).
+          </li>
+
+          <li>
+            <strong>Vídeo:</strong> Embeds de <a href="https://www.youtube.com" target="_blank"
+              rel="noopener noreferrer">YouTube</a> (Propiedad de sus respectivos canales).
+          </li>
+        </ul>
+      </section>
+
+      <!-- Technology links -->
+      <section class="links__section">
+        <h2 class="links__section-title">
+          <i class="fa-solid fa-code" aria-hidden="true"></i> Tecnologías
+        </h2>
+
+        <ul class="links__list">
+          <li>
+            <a href="https://parceljs.org/" target="_blank" rel="noopener noreferrer">Parcel Bundler</a> -
+            Empaquetador de módulos.
+          </li>
+
+          <li>
+            <a href="https://basiclightbox.electerious.com/" target="_blank" rel="noopener noreferrer">basicLightbox</a>
+            - Galerías modales ligeras.
+          </li>
+
+          <li>
+            <a href="https://fontawesome.com/" target="_blank" rel="noopener noreferrer">FontAwesome 6</a> -
+            Iconografía vectorial.
+          </li>
+
+          <li>
+            <a href="https://sass-lang.com/" target="_blank" rel="noopener noreferrer">Sass (SCSS)</a> -
+            Preprocesador CSS.
+          </li>
+        </ul>
+      </section>
+    </div>
+  </main>
+
+  <include src="./src/assets/views/footer.html"></include>
+
+  <script defer type="module" src="../assets/scripts/main.js"></script>
 </body>
 
 </html>

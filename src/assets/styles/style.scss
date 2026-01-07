@@ -25,6 +25,11 @@ body {
   overflow-x: hidden;
 }
 
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
 img,
 picture,
 video,
@@ -77,7 +82,7 @@ svg {
 .button {
   display: inline-block;
   background-color: variables.$color-btn;
-  color: variables.$color-btn-text;
+  color: variables.$color-secondary;
   border: none;
   border-radius: variables.$border-radius;
   padding: 0.5em 1em;

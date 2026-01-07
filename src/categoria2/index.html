@@ -5,7 +5,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- Title -->
   <title>TokyoGo! | Restaurantes</title>
+
+  <!-- Meta information -->
   <meta name="author" content="Adrián Galán Pacheco">
   <meta name="description"
     content="Encuentra los mejores restaurantes de Tokio: Ichiran Ramen, Izakayas en Omoide Yokocho y alta cocina. Guía gastronómica.">
@@ -16,44 +19,68 @@
   <meta property="og:image" content="../assets/images/ichiranramen.jpg">
   <meta property="og:type" content="article">
 
+  <!-- Fonts display swap -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Merriweather:wght@400;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Favicon -->
   <link rel="icon" href="../assets/images/flaticon.png" type="image/png">
 
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="../../node_modules/normalize.css/normalize.css">
   <link rel="stylesheet" href="../assets/styles/category.scss">
+
+  <!-- Preload images -->
+  <link rel="preload" as="image" href="../assets/images/ichiranramen.jpg?width=400" imagesrcset="../assets/images/ichiranramen.jpg?as=avif&width=400 400w,
+    ../assets/images/ichiranramen.jpg?as=avif&width=800 800w,
+    ../assets/images/ichiranramen.jpg?as=avif&width=1200 1200w"
+    imagesizes="(max-width: 768px) 90vw, (max-width: 1200px) 45vw, 30vw">
 </head>
 
 <body>
 
+  <!-- Skip link -->
   <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
 
   <include src="./src/assets/views/header.html"></include>
 
   <main id="main-content" class="category">
 
+    <!-- Intro -->
     <section class="category__intro">
       <h1 class="category__title">Restaurantes</h1>
       <p class="category__subtitle">Tokio es un paraíso para los amantes de la buena mesa, donde la tradición japonesa
         convive con la alta cocina internacional. Esta es nuestra selección de experiencias culinarias que no te puedes
         perder.</p>
-
     </section>
 
+    <!-- Cards -->
     <section>
       <ul class="category__cards-container">
 
         <li class="category-card">
+          <!-- Picture -->
           <picture>
-            <source
-              srcset="../assets/images/ichiranramen.jpg?as=avif&width=400 400w, ../assets/images/ichiranramen.jpg?as=avif&width=800 800w, ../assets/images/ichiranramen.jpg?as=avif&width=1200 1200w"
+            <!-- Avif -->
+            <source srcset="../assets/images/ichiranramen.jpg?as=avif&width=400 400w, 
+              ../assets/images/ichiranramen.jpg?as=avif&width=800 800w,
+              ../assets/images/ichiranramen.jpg?as=avif&width=1200 1200w"
               sizes="(max-width: 768px) 90vw, (max-width: 1200px) 45vw, 30vw" type="image/avif">
-            <source
-              srcset="../assets/images/ichiranramen.jpg?as=webp&width=400 400w, ../assets/images/ichiranramen.jpg?as=webp&width=800 800w, ../assets/images/ichiranramen.jpg?as=webp&width=1200 1200w"
+
+            <!-- WebP -->
+            <source srcset="../assets/images/ichiranramen.jpg?as=webp&width=400 400w,
+              ../assets/images/ichiranramen.jpg?as=webp&width=800 800w,
+              ../assets/images/ichiranramen.jpg?as=webp&width=1200 1200w"
               sizes="(max-width: 768px) 90vw, (max-width: 1200px) 45vw, 30vw" type="image/webp">
 
+            <!-- Image loading eager and fetchpriority high -->
             <img class="category-card__image" src="../assets/images/ichiranramen.jpg?width=800"
-              alt="Cabinas individuales de concentración en Ichiran Ramen" width="800" height="600"
-              fetchpriority="high">
+              alt="Cabinas individuales de concentración en Ichiran Ramen" width="800" height="600" fetchpriority="high"
+              loading="eager">
           </picture>
+
+          <!-- Content -->
           <div class="category-card__content">
             <h2 class="category-card__title">Ichiran Ramen</h2>
             <p class="category-card__description">La experiencia definitiva para amantes del ramen. Famoso por sus
@@ -64,16 +91,20 @@
 
         <li class="category-card">
           <picture>
-            <source
-              srcset="../assets/images/omoideyokocho.jpg?as=avif&width=400 400w, ../assets/images/omoideyokocho.jpg?as=avif&width=800 800w, ../assets/images/omoideyokocho.jpg?as=avif&width=1200 1200w"
+            <source srcset="../assets/images/omoideyokocho.jpg?as=avif&width=400 400w,
+              ../assets/images/omoideyokocho.jpg?as=avif&width=800 800w,
+              ../assets/images/omoideyokocho.jpg?as=avif&width=1200 1200w"
               sizes="(max-width: 768px) 90vw, (max-width: 1200px) 45vw, 30vw" type="image/avif">
-            <source
-              srcset="../assets/images/omoideyokocho.jpg?as=webp&width=400 400w, ../assets/images/omoideyokocho.jpg?as=webp&width=800 800w, ../assets/images/omoideyokocho.jpg?as=webp&width=1200 1200w"
+
+            <source srcset="../assets/images/omoideyokocho.jpg?as=webp&width=400 400w,
+              ../assets/images/omoideyokocho.jpg?as=webp&width=800 800w,
+              ../assets/images/omoideyokocho.jpg?as=webp&width=1200 1200w"
               sizes="(max-width: 768px) 90vw, (max-width: 1200px) 45vw, 30vw" type="image/webp">
 
             <img class="category-card__image" src="../assets/images/omoideyokocho.jpg?width=800"
               alt="Farolillos rojos iluminando el callejón de Omoide Yokocho" width="800" height="600" loading="lazy">
           </picture>
+
           <div class="category-card__content">
             <h2 class="category-card__title">Omoide Yokocho</h2>
             <p class="category-card__description">Viaja al Tokio de la posguerra. Un laberinto nostálgico de pequeñas
@@ -84,16 +115,20 @@
 
         <li class="category-card">
           <picture>
-            <source
-              srcset="../assets/images/sanmichele.jpg?as=avif&width=400 400w, ../assets/images/sanmichele.jpg?as=avif&width=800 800w, ../assets/images/sanmichele.jpg?as=avif&width=1200 1200w"
+            <source srcset="../assets/images/sanmichele.jpg?as=avif&width=400 400w,
+              ../assets/images/sanmichele.jpg?as=avif&width=800 800w,
+              ../assets/images/sanmichele.jpg?as=avif&width=1200 1200w"
               sizes="(max-width: 768px) 90vw, (max-width: 1200px) 45vw, 30vw" type="image/avif">
-            <source
-              srcset="../assets/images/sanmichele.jpg?as=webp&width=400 400w, ../assets/images/sanmichele.jpg?as=webp&width=800 800w, ../assets/images/sanmichele.jpg?as=webp&width=1200 1200w"
+
+            <source srcset="../assets/images/sanmichele.jpg?as=webp&width=400 400w,
+              ../assets/images/sanmichele.jpg?as=webp&width=800 800w, 
+              ../assets/images/sanmichele.jpg?as=webp&width=1200 1200w"
               sizes="(max-width: 768px) 90vw, (max-width: 1200px) 45vw, 30vw" type="image/webp">
 
             <img class="category-card__image" src="../assets/images/sanmichele.jpg?width=800"
               alt="Elegante interior del restaurante italiano San Michele" width="800" height="600" loading="lazy">
           </picture>
+
           <div class="category-card__content">
             <h2 class="category-card__title">San Michele</h2>
             <p class="category-card__description">Una joya italiana en el corazón de Tokio. Disfruta de pasta fresca y
@@ -104,16 +139,20 @@
 
         <li class="category-card">
           <picture>
-            <source
-              srcset="../assets/images/toromasa.jpg?as=avif&width=400 400w, ../assets/images/toromasa.jpg?as=avif&width=800 800w, ../assets/images/toromasa.jpg?as=avif&width=1200 1200w"
+            <source srcset="../assets/images/toromasa.jpg?as=avif&width=400 400w,
+              ../assets/images/toromasa.jpg?as=avif&width=800 800w,
+              ../assets/images/toromasa.jpg?as=avif&width=1200 1200w"
               sizes="(max-width: 768px) 90vw, (max-width: 1200px) 45vw, 30vw" type="image/avif">
-            <source
-              srcset="../assets/images/toromasa.jpg?as=webp&width=400 400w, ../assets/images/toromasa.jpg?as=webp&width=800 800w, ../assets/images/toromasa.jpg?as=webp&width=1200 1200w"
+
+            <source srcset="../assets/images/toromasa.jpg?as=webp&width=400 400w,
+              ../assets/images/toromasa.jpg?as=webp&width=800 800w,
+              ../assets/images/toromasa.jpg?as=webp&width=1200 1200w"
               sizes="(max-width: 768px) 90vw, (max-width: 1200px) 45vw, 30vw" type="image/webp">
 
             <img class="category-card__image" src="../assets/images/toromasa.jpg?width=800"
               alt="Chef preparando sushi de atún en Toro Masa" width="800" height="600" loading="lazy">
           </picture>
+
           <div class="category-card__content">
             <h2 class="category-card__title">Toro Masa</h2>
             <p class="category-card__description">Alta cocina japonesa centrada en el atún de la más alta calidad. Una
@@ -121,7 +160,6 @@
             <a href="#" class="button">Ver más <span class="visually-hidden">sobre Toro Masa</span></a>
           </div>
         </li>
-
       </ul>
     </section>
   </main>

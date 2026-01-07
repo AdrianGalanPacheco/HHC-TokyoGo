@@ -1,45 +1,51 @@
 <header class="header">
-    <input type="checkbox" id="menu" class="header__checkbox" aria-hidden="true">
+  <!-- Checkbox menu -->
+  <input type="checkbox" id="menu" class="header__checkbox" aria-hidden="true">
 
-    <label for="menu" class="header__menu" role="button" aria-label="Abrir menú de navegación">
-        <i class="fa-solid fa-bars" aria-hidden="true"></i>
+  <label for="menu" class="header__menu" role="button" aria-label="Abrir menú de navegación">
+    <i class="fa-solid fa-bars" aria-hidden="true"></i>
+  </label>
+
+  <div class="header__title">
+    <a href="/" aria-label="TokyoGo! - Volver al inicio">TokyoGo!</a>
+  </div>
+
+  <div class="header__spacer"></div>
+
+  <!-- Navbar -->
+  <nav class="header__sidebar" aria-label="Navegación principal">
+
+    <label for="menu" class="header__sidebar-close" role="button" aria-label="Cerrar menú">
+      <i class="fa-solid fa-xmark" aria-hidden="true"></i>
     </label>
 
-    <div class="header__title">
-        <a href="/" aria-label="TokyoGo! - Volver al inicio">TokyoGo!</a>
-    </div>
+    <ul class="header__sidebar-list">
+      <li>
+        <a href="/categoria">
+          <i class="fa-solid fa-utensils" aria-hidden="true"></i> Gastronomía
+        </a>
+      </li>
 
-    <div class="header__spacer"></div>
+      <li>
+        <a href="/categoria2">
+          <i class="fa-solid fa-store" aria-hidden="true"></i> Restaurantes
+        </a>
+      </li>
 
-    <nav class="header__sidebar" aria-label="Navegación principal">
+      <li>
+        <a href="/categoria3">
+          <i class="fa-solid fa-torii-gate" aria-hidden="true"></i> Templos
+        </a>
+      </li>
 
-        <label for="menu" class="header__sidebar-close" role="button" aria-label="Cerrar menú">
-            <i class="fa-solid fa-xmark" aria-hidden="true"></i>
-        </label>
+      <li>
+        <a href="/links">
+          <i class="fa-solid fa-link" aria-hidden="true"></i> Enlaces
+        </a>
+      </li>
+    </ul>
+  </nav>
 
-        <ul class="header__sidebar-list">
-            <li>
-                <a href="/categoria">
-                    <i class="fa-solid fa-utensils" aria-hidden="true"></i> Gastronomía
-                </a>
-            </li>
-            <li>
-                <a href="/categoria2">
-                    <i class="fa-solid fa-store" aria-hidden="true"></i> Restaurantes
-                </a>
-            </li>
-            <li>
-                <a href="/categoria3">
-                    <i class="fa-solid fa-torii-gate" aria-hidden="true"></i> Templos
-                </a>
-            </li>
-            <li>
-                <a href="/links">
-                    <i class="fa-solid fa-link" aria-hidden="true"></i> Enlaces
-                </a>
-            </li>
-        </ul>
-    </nav>
-
-    <label for="menu" class="header__overlay" aria-hidden="true"></label>
+  <!-- Overlay -->
+  <label for="menu" class="header__overlay" aria-hidden="true"></label>
 </header>

@@ -2,136 +2,188 @@
 <html lang="es">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>TokyoGo! | Ramen</title>
-    <meta name="author" content="Adrián Galán Pacheco">
-    <meta name="description"
-        content="Todo sobre el ramen japonés: historia, tipos de caldo (Tonkotsu, Miso, Shoyu) y los mejores toppings.">
+  <!-- Title -->
+  <title>TokyoGo! | Ramen</title>
 
-    <meta property="og:title" content="TokyoGo! | El mundo del Ramen">
-    <meta property="og:description" content="Descubre la historia y secretos del plato más icónico de Japón.">
-    <meta property="og:image" content="../assets/images/ramen.jpg">
-    <meta property="og:type" content="article">
+  <!-- Meta information -->
+  <meta name="author" content="Adrián Galán Pacheco">
+  <meta name="description"
+    content="Todo sobre el ramen japonés: historia, tipos de caldo (Tonkotsu, Miso, Shoyu) y los mejores toppings.">
 
-    <link rel="icon" href="../assets/images/flaticon.png" type="image/png">
+  <meta property="og:title" content="TokyoGo! | El mundo del Ramen">
+  <meta property="og:description" content="Descubre la historia y secretos del plato más icónico de Japón.">
+  <meta property="og:image" content="../assets/images/ramen.jpg">
+  <meta property="og:type" content="article">
 
-    <link rel="stylesheet" href="../../node_modules/normalize.css/normalize.css">
-    <link rel="stylesheet" href="../assets/styles/details.scss">
+  <!-- Fonts display swap -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Merriweather:wght@400;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" href="../assets/images/flaticon.png" type="image/png">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../../node_modules/normalize.css/normalize.css">
+  <link rel="stylesheet" href="../assets/styles/details.scss">
+
+  <!-- Preload images -->
+  <link rel="preload" as="image" href="../assets/images/ramen.jpg?width=600" imagesrcset="../assets/images/ramen.jpg?as=avif&width=600 600w,
+        ../assets/images/ramen.jpg?as=avif&width=1200 1200w" imagesizes="(max-width: 767px) 100vw, 1200px">
 </head>
 
 <body>
 
-    <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
+  <!-- Skip link -->
+  <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
 
-    <include src="./src/assets/views/header.html"></include>
+  <include src="./src/assets/views/header.html"></include>
 
-    <main class="details" id="main-content">
+  <main class="details" id="main-content">
 
-        <section class="details__intro">
-            <h1 class="details__title">Ramen</h1>
+    <!-- Intro -->
+    <section class="details__intro">
+      <h1 class="details__title">Ramen</h1>
 
-            <picture>
-                <source media="(max-width: 767px)" srcset="../assets/images/ramen.jpg?width=600&height=600&as=avif"
-                    type="image/avif">
-                <source media="(min-width: 768px)" srcset="../assets/images/ramen.jpg?width=1200&as=avif"
-                    type="image/avif">
+      <!-- Picture -->
+      <picture>
+        <!-- Avif -->
+        <source media="(max-width: 767px)" srcset="../assets/images/ramen.jpg?width=600&as=avif" type="image/avif">
 
-                <source media="(max-width: 767px)" srcset="../assets/images/ramen.jpg?width=600&height=600&as=webp"
-                    type="image/webp">
-                <source media="(min-width: 768px)" srcset="../assets/images/ramen.jpg?width=1200&as=webp"
-                    type="image/webp">
+        <source media="(min-width: 768px)" srcset="../assets/images/ramen.jpg?width=1200&as=avif" type="image/avif">
 
-                <img class="details__image" src="../assets/images/ramen.jpg?width=800"
-                    alt="Primer plano de un tazón de ramen con huevo y naruto" width="800" height="600"
-                    fetchpriority="high">
-            </picture>
+        <!-- WebP -->
+        <source media="(max-width: 767px)" srcset="../assets/images/ramen.jpg?width=600&as=webp" type="image/webp">
 
-            <div class="details__info">
-                <p>El ramen es mucho más que una simple sopa de fideos; es un universo culinario, una obsesión nacional
-                    y una forma de arte. Originario de China, este plato fue adaptado y perfeccionado en Japón hasta
-                    convertirse en un icono indiscutible de su gastronomía.</p>
-                <p>La base de un buen ramen reside en la perfecta armonía de sus componentes: los fideos (men), el caldo
-                    (dashi), el condimento base (tare) y los toppings. El caldo puede ser de cerdo (tonkotsu), pollo
-                    (tori paitan) o vegetales.</p>
-                <p>Explorar el mundo del ramen en Tokio es una aventura en sí misma. Desde pequeñas barras con apenas
-                    seis asientos hasta famosas cadenas, cada local ofrece su propia interpretación de este plato
-                    reconfortante.</p>
-            </div>
+        <source media="(min-width: 768px)" srcset="../assets/images/ramen.jpg?width=1200&as=webp" type="image/webp">
 
-        </section>
+        <!-- Image loading eager and fetchpriority high -->
+        <img class="details__image" src="../assets/images/ramen.jpg?width=800"
+          alt="Primer plano de un tazón de ramen con huevo y naruto" width="800" height="600" fetchpriority="high"
+          loading="eager">
+      </picture>
 
-        <section class="details__gallery">
-            <h2 class="details__subtitle">Galería</h2>
+      <!-- Details -->
+      <div class="details__info">
+        <p>El ramen es mucho más que una simple sopa de fideos; es un universo culinario, una obsesión nacional
+          y una forma de arte. Originario de China, este plato fue adaptado y perfeccionado en Japón hasta
+          convertirse en un icono indiscutible de su gastronomía.</p>
+        <p>La base de un buen ramen reside en la perfecta armonía de sus componentes: los fideos (men), el caldo
+          (dashi), el condimento base (tare) y los toppings. El caldo puede ser de cerdo (tonkotsu), pollo
+          (tori paitan) o vegetales.</p>
+        <p>Explorar el mundo del ramen en Tokio es una aventura en sí misma. Desde pequeñas barras con apenas
+          seis asientos hasta famosas cadenas, cada local ofrece su propia interpretación de este plato
+          reconfortante.</p>
+      </div>
+    </section>
 
-            <div class="details__gallery-cards">
+    <!-- Gallery -->
+    <section class="details__gallery">
+      <h2 class="details__subtitle">Galería</h2>
 
-                <figure class="details__gallery-card">
-                    <picture>
-                        <source
-                            srcset="../assets/images/ramen1.jpg?as=avif&width=400 400w, ../assets/images/ramen1.jpg?as=avif&width=800 800w"
-                            sizes="(max-width: 768px) 50vw, 400px" type="image/avif">
-                        <source
-                            srcset="../assets/images/ramen1.jpg?as=webp&width=400 400w, ../assets/images/ramen1.jpg?as=webp&width=800 800w"
-                            sizes="(max-width: 768px) 50vw, 400px" type="image/webp">
+      <div class="details__gallery-cards">
 
-                        <img class="details__gallery-image" src="../assets/images/ramen1.jpg?width=600"
-                            alt="Detalle de naruto en el ramen" width="600" height="400" loading="lazy">
-                    </picture>
-                    <figcaption class="details__gallery-caption">Ramen con naruto.</figcaption>
-                </figure>
+        <figure class="details__gallery-card">
+          <picture>
+            <source srcset="../assets/images/ramen1.jpg?as=avif&width=400 400w,
+                            ../assets/images/ramen1.jpg?as=avif&width=800 800w" sizes="(max-width: 768px) 50vw, 400px"
+              type="image/avif">
 
-                <figure class="details__gallery-card">
-                    <picture>
-                        <source
-                            srcset="../assets/images/ramen2.jpg?as=avif&width=400 400w, ../assets/images/ramen2.jpg?as=avif&width=800 800w"
-                            sizes="(max-width: 768px) 50vw, 400px" type="image/avif">
-                        <source
-                            srcset="../assets/images/ramen2.jpg?as=webp&width=400 400w, ../assets/images/ramen2.jpg?as=webp&width=800 800w"
-                            sizes="(max-width: 768px) 50vw, 400px" type="image/webp">
+            <source srcset="../assets/images/ramen1.jpg?as=webp&width=400 400w,
+                            ../assets/images/ramen1.jpg?as=webp&width=800 800w" sizes="(max-width: 768px) 50vw, 400px"
+              type="image/webp">
 
-                        <img class="details__gallery-image" src="../assets/images/ramen2.jpg?width=600"
-                            alt="Caldo denso Tonkotsu de cerdo" width="600" height="400" loading="lazy">
-                    </picture>
-                    <figcaption class="details__gallery-caption">Tazón de ramen de cerdo.</figcaption>
-                </figure>
+            <img class="details__gallery-image" src="../assets/images/ramen1.jpg?width=600"
+              alt="Detalle de naruto en el ramen" width="600" height="400" loading="lazy">
+          </picture>
 
-                <figure class="details__gallery-card">
-                    <picture>
-                        <source
-                            srcset="../assets/images/ramen3.jpg?as=avif&width=400 400w, ../assets/images/ramen3.jpg?as=avif&width=800 800w"
-                            sizes="(max-width: 768px) 50vw, 400px" type="image/avif">
-                        <source
-                            srcset="../assets/images/ramen3.jpg?as=webp&width=400 400w, ../assets/images/ramen3.jpg?as=webp&width=800 800w"
-                            sizes="(max-width: 768px) 50vw, 400px" type="image/webp">
+          <figcaption class="details__gallery-caption">Ramen con naruto.</figcaption>
+        </figure>
 
-                        <img class="details__gallery-image" src="../assets/images/ramen3.jpg?width=600"
-                            alt="Presentación clásica de ramen" width="600" height="400" loading="lazy">
-                    </picture>
-                    <figcaption class="details__gallery-caption">Tazón de ramen.</figcaption>
-                </figure>
-            </div>
-        </section>
+        <figure class="details__gallery-card">
+          <picture>
+            <source srcset="../assets/images/ramen2.jpg?as=avif&width=400 400w,
+                            ../assets/images/ramen2.jpg?as=avif&width=800 800w" sizes="(max-width: 768px) 50vw, 400px"
+              type="image/avif">
 
-        <section class="details__videos">
-            <h2 class="details__subtitle">Vídeos</h2>
-            <div class="details__video-container">
-                <iframe class="details__video" width="560" height="315"
-                    src="https://www.youtube-nocookie.com/embed/Wqb2fz06zYo?si=AhvCsKdbVqb0FwPh"
-                    srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube-nocookie.com/embed/Wqb2fz06zYo?si=AhvCsKdbVqb0FwPh&autoplay=1><img src=https://img.youtube.com/vi/Wqb2fz06zYo/hqdefault.jpg alt='Video sobre Ramen'><span>▶</span></a>"
-                    title="Receta sobre el ramen japonés" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin" loading="lazy" allowfullscreen>
-                </iframe>
-            </div>
-        </section>
+            <source srcset="../assets/images/ramen2.jpg?as=webp&width=400 400w,
+                            ../assets/images/ramen2.jpg?as=webp&width=800 800w" sizes="(max-width: 768px) 50vw, 400px"
+              type="image/webp">
 
-    </main>
+            <img class="details__gallery-image" src="../assets/images/ramen2.jpg?width=600"
+              alt="Caldo denso Tonkotsu de cerdo" width="600" height="400" loading="lazy">
+          </picture>
 
-    <include src="./src/assets/views/footer.html"></include>
+          <figcaption class="details__gallery-caption">Tazón de ramen de cerdo.</figcaption>
+        </figure>
 
-    <script defer type="module" src="../assets/scripts/main.js"></script>
+        <figure class="details__gallery-card">
+          <picture>
+            <source srcset="../assets/images/ramen3.jpg?as=avif&width=400 400w,
+                            ../assets/images/ramen3.jpg?as=avif&width=800 800w" sizes="(max-width: 768px) 50vw, 400px"
+              type="image/avif">
+
+            <source srcset="../assets/images/ramen3.jpg?as=webp&width=400 400w,
+                            ../assets/images/ramen3.jpg?as=webp&width=800 800w" sizes="(max-width: 768px) 50vw, 400px"
+              type="image/webp">
+
+            <img class="details__gallery-image" src="../assets/images/ramen3.jpg?width=600"
+              alt="Presentación clásica de ramen" width="600" height="400" loading="lazy">
+          </picture>
+
+          <figcaption class="details__gallery-caption">Tazón de ramen.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Video -->
+    <section class="details__videos">
+      <h2 class="details__subtitle">Vídeos</h2>
+
+      <div class="details__video-container">
+        <!-- Simulate the video loading -->
+        <iframe class="details__video" width="560" height="315"
+          src="https://www.youtube-nocookie.com/embed/Wqb2fz06zYo?si=AhvCsKdbVqb0FwPh" srcdoc="<style>
+                        *{
+                            padding:0;
+                            margin:0;
+                            overflow:hidden
+                        }
+                        html,body{
+                            height:100%
+                        }
+                        img,span{
+                            position:absolute;
+                            width:100%;
+                            top:0;
+                            bottom:0;
+                            margin:auto
+                        }
+                        span{
+                            height:1.5em;
+                            text-align:center;
+                            font:48px/1.5 sans-serif;
+                            color:white;
+                            text-shadow:0 0 0.5em black
+                        }</style>
+                        <a href=https://www.youtube-nocookie.com/embed/Wqb2fz06zYo?si=AhvCsKdbVqb0FwPh&autoplay=1>
+                            <img src=https://img.youtube.com/vi/Wqb2fz06zYo/hqdefault.jpg alt='Video sobre Ramen'>
+                            <span>▶</span>
+                        </a>" title="Receta sobre el ramen japonés" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" loading="lazy" allowfullscreen>
+        </iframe>
+      </div>
+    </section>
+
+  </main>
+
+  <include src="./src/assets/views/footer.html"></include>
+
+  <script defer type="module" src="../assets/scripts/main.js"></script>
 </body>
 
 </html>
